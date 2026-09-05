@@ -1,0 +1,1449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects &amp; Presentations — Astria &amp; Co.</title>
+  <meta name="description" content="Explore selected client presentation decks and interactive masterpieces designed by Astria &amp; Co.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://astriacreative.co/projects.html">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://astriacreative.co/projects.html">
+  <meta property="og:title" content="Projects &amp; Presentations — Astria &amp; Co.">
+  <meta property="og:description" content="Explore selected client presentation decks and interactive masterpieces designed by Astria &amp; Co.">
+  <meta property="og:image" content="https://astriacreative.co/assets/og-image.png">
+  <meta property="og:site_name" content="Astria &amp; Co.">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://astriacreative.co/projects.html">
+  <meta name="twitter:title" content="Projects &amp; Presentations — Astria &amp; Co.">
+  <meta name="twitter:description" content="Explore selected client presentation decks and interactive masterpieces designed by Astria &amp; Co.">
+  <meta name="twitter:image" content="https://astriacreative.co/assets/og-image.png">
+
+  
+  <!-- Google Fonts: Poppins (300, 400, 500, 600, 700, 800, 900 + italics) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,500&display=swap" rel="stylesheet">
+  
+  <!-- Connect main branding style system sheet -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <style>
+    /* --------------------------------------------------
+       PAGE LAYOUT & SPACING
+    -------------------------------------------------- */
+    body {
+      background-color: var(--bg-black);
+      color: var(--neutral-light);
+    }
+
+    #projects-page-container {
+      padding-top: 140px; /* Offset fixed header */
+      padding-bottom: 8rem;
+    }
+
+    .page-intro {
+      max-width: 1400px;
+      margin: 0 auto 4rem auto;
+      padding: 0 2rem;
+    }
+
+    .page-tag {
+      font-family: var(--font-family);
+      font-weight: 300;
+      font-size: 0.8rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--glow-sage);
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .page-title {
+      font-family: var(--font-family);
+      font-weight: 900;
+      font-size: clamp(3rem, 6.5vw, 5.5rem);
+      line-height: 1.1;
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.5rem;
+      -webkit-text-stroke: 1.5px rgba(245, 242, 238, 0.95);
+      color: transparent;
+      transition: var(--transition-smooth);
+    }
+
+    .page-title:hover {
+      -webkit-text-stroke: 1.5px var(--glow-sage);
+      text-shadow: 0 0 40px rgba(111, 175, 132, 0.65);
+      color: var(--glow-sage);
+    }
+
+    /* --------------------------------------------------
+       FLAGSHIP PROJECTS GRID & CARDS
+    -------------------------------------------------- */
+    .flagship-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3rem;
+      max-width: 1250px;
+      margin: 0 auto;
+    }
+
+    .flagship-card {
+      position: relative;
+      border-radius: 24px;
+      background: var(--dark-green-glass);
+      border: 1px solid var(--glass-border);
+      overflow: hidden;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1), border-color 0.4s ease;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .flagship-card:hover {
+      border-color: var(--glass-border-hover);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+    }
+
+    .flagship-img-wrapper {
+      width: 100%;
+      height: 280px;
+      overflow: hidden;
+      position: relative;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      background: #000;
+    }
+
+    .flagship-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    .flagship-card:hover .flagship-img {
+      transform: scale(1.06);
+    }
+
+    .flagship-card-content {
+      padding: 2.25rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .flagship-category {
+      font-family: var(--font-family);
+      font-weight: 300;
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--glow-sage);
+      margin-bottom: 0.75rem;
+      display: block;
+    }
+
+    .flagship-card-title {
+      font-family: var(--font-family);
+      font-weight: 700;
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      color: var(--neutral-light);
+    }
+
+    .flagship-card-desc {
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 0.92rem;
+      color: var(--muted-grey);
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+      flex-grow: 1;
+    }
+
+    .flagship-card-glow-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle 220px at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(111, 175, 132, 0.15), transparent 80%);
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .flagship-card:hover .flagship-card-glow-bg {
+      opacity: 1;
+    }
+
+    /* --------------------------------------------------
+       SPLIT COLUMN GRID (DESKTOP)
+    -------------------------------------------------- */
+    .projects-split-container {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 5rem;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      align-items: start;
+    }
+
+    .projects-list-column {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+
+    .deck-sticky-column {
+      position: sticky;
+      top: 130px;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      justify-content: flex-start;
+      z-index: 100;
+    }
+
+    /* --------------------------------------------------
+       GLASSMORPHIC PROJECT CARDS
+    -------------------------------------------------- */
+    .project-card {
+      position: relative;
+      border-radius: 24px;
+      background: var(--dark-green-glass);
+      border: 1px solid var(--glass-border);
+      padding: 2.5rem;
+      overflow: hidden;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      transform-style: preserve-3d;
+      transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1), border-color 0.4s ease, background 0.4s ease;
+      cursor: pointer;
+    }
+
+    .project-card-glow-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle 220px at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(111, 175, 132, 0.18), transparent 80%);
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      pointer-events: none;
+    }
+
+    .project-card:hover {
+      border-color: var(--glass-border-hover);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.35);
+    }
+
+    .project-card.active {
+      border-color: var(--glow-sage);
+      background: rgba(61, 107, 79, 0.22);
+      box-shadow: 0 0 20px rgba(111, 175, 132, 0.25);
+    }
+
+    .project-card:hover .project-card-glow-bg {
+      opacity: 1;
+    }
+
+    .project-card-content {
+      transform: translateZ(30px);
+      transform-style: preserve-3d;
+      position: relative;
+      z-index: 2;
+    }
+
+    .project-card-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .project-card-category {
+      font-family: var(--font-family);
+      font-weight: 300;
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--glow-sage);
+    }
+
+    .project-card-num {
+      font-family: var(--font-family);
+      font-weight: 800;
+      font-size: 1rem;
+      color: rgba(255, 255, 255, 0.25);
+    }
+
+    .project-card.active .project-card-num {
+      color: var(--glow-sage);
+      text-shadow: 0 0 8px var(--glow-sage);
+    }
+
+    .project-card-title {
+      font-family: var(--font-family);
+      font-weight: 700;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: var(--neutral-light);
+    }
+
+    .project-card-desc {
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 0.95rem;
+      color: var(--muted-grey);
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+
+    .project-card-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .project-badge {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: var(--neutral-light);
+      padding: 0.35rem 0.85rem;
+      border-radius: 50px;
+      font-size: 0.75rem;
+      font-weight: 500;
+    }
+
+    .project-card.active .project-badge {
+      border-color: rgba(111, 175, 132, 0.3);
+      background: rgba(111, 175, 132, 0.05);
+    }
+
+    .project-card-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--neutral-light);
+      transition: var(--transition-fast);
+    }
+
+    .project-card:hover .project-card-cta {
+      color: var(--glow-sage);
+    }
+
+    .project-card-cta svg {
+      transition: transform 0.3s ease;
+    }
+
+    .project-card:hover .project-card-cta svg {
+      transform: translateX(5px);
+    }
+
+    /* --------------------------------------------------
+       PRESENTATION DECK PLAYER
+    -------------------------------------------------- */
+    .deck-player {
+      background: rgba(255, 255, 255, 0.01);
+      border: 1px solid rgba(255, 255, 255, 0.04);
+      border-radius: 28px;
+      padding: 2rem;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+    }
+
+    .deck-viewport-wrapper {
+      position: relative;
+      width: 100%;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: #060606;
+      box-shadow: inset 0 0 20px rgba(0,0,0,0.8);
+    }
+
+    .deck-viewport {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      position: relative;
+      cursor: zoom-in;
+      overflow: hidden;
+    }
+
+    .deck-slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      opacity: 0;
+      transform: scale(0.96) translateY(5px);
+      transition: opacity 0.5s cubic-bezier(0.25, 0.8, 0.25, 1), transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .deck-slide.active {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+      z-index: 2;
+      pointer-events: auto;
+    }
+
+    /* Hover overlay for zoom cue */
+    .deck-viewport-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(13, 13, 13, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: 5;
+      pointer-events: none;
+    }
+
+    .deck-viewport:hover .deck-viewport-overlay {
+      opacity: 1;
+    }
+
+    .deck-zoom-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      backdrop-filter: blur(5px);
+      transform: scale(0.9);
+      transition: transform 0.3s ease, background 0.3s;
+    }
+
+    .deck-viewport:hover .deck-zoom-icon {
+      transform: scale(1);
+      background: var(--primary-green);
+      border-color: var(--glow-sage);
+      box-shadow: var(--glow-shadow);
+    }
+
+    /* Deck Controls Bar */
+    .deck-controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 0.5rem 1rem 0.5rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .deck-btn-group {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .deck-btn {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1px solid var(--primary-green);
+      background: rgba(13, 13, 13, 0.6);
+      color: var(--neutral-light);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition-smooth);
+    }
+
+    .deck-btn:hover {
+      border-color: var(--glow-sage);
+      box-shadow: var(--glow-shadow);
+      color: var(--glow-sage);
+      transform: translateY(-2px);
+    }
+
+    .deck-btn:active {
+      transform: translateY(1px);
+    }
+
+    .deck-counter {
+      font-family: var(--font-family);
+      font-weight: 600;
+      font-size: 0.95rem;
+      letter-spacing: 0.1em;
+      color: var(--glow-sage);
+      text-shadow: 0 0 10px rgba(111, 175, 132, 0.2);
+    }
+
+    /* Deck Description */
+    .deck-info-box {
+      padding-top: 1.5rem;
+    }
+
+    .deck-info-title {
+      font-family: var(--font-family);
+      font-weight: 700;
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+      color: var(--neutral-light);
+    }
+
+    .deck-info-desc {
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 0.9rem;
+      color: var(--muted-grey);
+      line-height: 1.5;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Deck Thumbnails Strip */
+    .deck-thumbnails {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.6rem;
+      margin-top: 1rem;
+    }
+
+    .deck-thumb {
+      aspect-ratio: 16 / 9;
+      border-radius: 8px;
+      border: 2px solid transparent;
+      overflow: hidden;
+      cursor: pointer;
+      opacity: 0.5;
+      background: #000;
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    .deck-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .deck-thumb:hover img {
+      transform: scale(1.1);
+    }
+
+    .deck-thumb:hover, .deck-thumb.active {
+      opacity: 1;
+      border-color: var(--glow-sage);
+      box-shadow: 0 0 10px rgba(111, 175, 132, 0.4);
+    }
+
+    /* --------------------------------------------------
+       FULLSCREEN LIGHTBOX MODAL
+    -------------------------------------------------- */
+    .lightbox-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(6, 6, 6, 0.98);
+      z-index: 2000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    .lightbox-modal.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .lightbox-content-wrapper {
+      position: relative;
+      max-width: 90%;
+      max-height: 85%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .lightbox-image {
+      max-width: 100%;
+      max-height: 80vh;
+      object-fit: contain;
+      border-radius: 12px;
+      box-shadow: 0 0 50px rgba(0,0,0,0.85);
+      border: 1px solid rgba(255,255,255,0.05);
+      transform: scale(0.95);
+      transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    .lightbox-modal.open .lightbox-image {
+      transform: scale(1);
+    }
+
+    .lightbox-title {
+      margin-top: 1.5rem;
+      font-family: var(--font-family);
+      font-weight: 600;
+      font-size: 1.2rem;
+      letter-spacing: 0.05em;
+      color: var(--neutral-light);
+      text-align: center;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: -3.5rem;
+      right: 0;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1.2rem;
+      transition: all 0.3s;
+    }
+
+    .lightbox-close:hover {
+      background: var(--primary-green);
+      border-color: var(--glow-sage);
+      box-shadow: var(--glow-shadow);
+      color: #fff;
+      transform: rotate(90deg);
+    }
+
+    /* Lightbox controls overlays */
+    .lightbox-nav-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s;
+      z-index: 2010;
+    }
+
+    .lightbox-nav-btn:hover {
+      background: var(--primary-green);
+      border-color: var(--glow-sage);
+      box-shadow: var(--glow-shadow);
+    }
+
+    .lightbox-prev {
+      left: -5rem;
+    }
+
+    .lightbox-next {
+      right: -5rem;
+    }
+
+    /* Active Link State in Header Navigation */
+    .nav-link.active {
+      color: var(--glow-sage) !important;
+    }
+    .nav-link.active::after {
+      width: 100% !important;
+    }
+
+    /* --------------------------------------------------
+       RESPONSIVE DESIGN SYSTEM (DESKTOP FIRST)
+    -------------------------------------------------- */
+    @media (max-width: 1200px) {
+      .projects-split-container {
+        gap: 3rem;
+      }
+      .lightbox-prev { left: -3rem; }
+      .lightbox-next { right: -3rem; }
+    }
+
+    @media (max-width: 1100px) {
+      .projects-split-container {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+      }
+
+      .deck-sticky-column {
+        position: relative;
+        top: 0;
+        z-index: 10;
+        margin-bottom: 2rem;
+      }
+      
+      .lightbox-prev, .lightbox-next {
+        position: static;
+        transform: none;
+        margin-top: 1rem;
+      }
+
+      .lightbox-nav-buttons-mobile {
+        display: flex;
+        gap: 1.5rem;
+        margin-top: 1.5rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      #projects-page-container {
+        padding-top: 110px;
+      }
+      
+      .project-card {
+        padding: 2rem;
+      }
+
+      .deck-player {
+        padding: 1.25rem;
+        border-radius: 20px;
+      }
+      
+      .deck-thumbnails {
+        gap: 0.4rem;
+      }
+
+      .lightbox-close {
+        top: auto;
+        bottom: -4.5rem;
+        right: 50%;
+        transform: translateX(50%);
+      }
+
+      .lightbox-close:hover {
+        transform: translateX(50%) rotate(90deg);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Custom Smooth Scroll Container -->
+  <div id="scroll-content">
+
+    <!-- Header & Navigation -->
+    <header id="main-header">
+      <div class="header-container">
+        <a href="index.html#hero" class="brand-logo" id="nav-logo">
+          <svg viewBox="0 0 100 100" class="logo-svg">
+            <polygon points="50,15 80,75 20,75" class="logo-triangle-outer"></polygon>
+            <polygon points="50,35 68,70 32,70" class="logo-triangle-inner"></polygon>
+            <circle cx="50" cy="55" r="8" class="logo-core"></circle>
+          </svg>
+          <span class="brand-text">ASTRIA &amp; CO.</span>
+        </a>
+        <nav class="nav-menu">
+          <a href="index.html#hero" class="nav-link">Home</a>
+          <a href="index.html#about" class="nav-link">About</a>
+          <a href="index.html#services" class="nav-link">Services</a>
+          <a href="index.html#process" class="nav-link">Process</a>
+          <a href="projects.html" class="nav-link active">Work</a>
+          <a href="index.html#founders" class="nav-link">Founders</a>
+          <a href="index.html#footer" class="nav-contact-btn">Get In Touch</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Projects Section -->
+    <main id="projects-page-container">
+      
+      <!-- Page Intro Heading -->
+      <section class="page-intro" style="margin-bottom: 5rem;">
+        <span class="page-tag">OUR DIGITAL GALLERY</span>
+        <h1 class="page-title">Projects &amp; Decks</h1>
+        <p class="body-text italic-accent" style="margin: 0; max-width: 700px;">
+          Scroll through our high-performance interactive web masterpieces and examine the creative brand presentations designed to scale modern businesses.
+        </p>
+      </section>
+
+      <!-- SECTION 1: FLAGSHIP PROJECTS (REAL WEB APPLICATIONS) -->
+      <section class="section-container" style="margin-bottom: 8rem; max-width: 1400px; padding: 0 2rem;">
+        <div class="section-header-center" style="margin-bottom: 4rem;">
+          <span class="section-tag" style="text-align: center;">CASE STUDIES</span>
+          <h2 class="section-title" style="text-align: center; font-size: clamp(2.2rem, 4.5vw, 3.2rem);">Flagship Web Masterpieces</h2>
+          <p class="body-text" style="margin: 0 auto; text-align: center; max-width: 650px;">
+            Explore our real-world interactive applications, showcasing advanced user experiences, clean rendering architecture, and seamless cross-platform performance.
+          </p>
+        </div>
+
+        <div class="flagship-grid">
+          <!-- Card A: Mascot Education Hub -->
+          <div class="flagship-card" data-tilt data-tilt-max="5" data-tilt-glare="true" data-tilt-max-glare="0.15">
+            <div class="flagship-card-glow-bg"></div>
+            <div class="flagship-img-wrapper">
+              <img src="assets/mascot-education.png" alt="Mascot Education Hub Portal" class="flagship-img">
+            </div>
+            <div class="flagship-card-content">
+              <span class="flagship-category">ED-TECH PORTAL</span>
+              <h3 class="flagship-card-title">Mascot Education Hub</h3>
+              <p class="flagship-card-desc">
+                An immersive educational platform integrating mascot-based interactive learning guidelines, modern student profiles, gamified dashboards, and premium course catalog components.
+              </p>
+              <div class="project-card-badges">
+                <span class="project-badge">WebGL Frontend</span>
+                <span class="project-badge">User Dashboards</span>
+                <span class="project-badge">Interface Mockups</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card B: Saawariya Mobile -->
+          <div class="flagship-card" data-tilt data-tilt-max="5" data-tilt-glare="true" data-tilt-max-glare="0.15">
+            <div class="flagship-card-glow-bg"></div>
+            <div class="flagship-img-wrapper">
+              <img src="assets/saawariya-mobile.png" alt="Saawariya Mobile Store UI" class="flagship-img">
+            </div>
+            <div class="flagship-card-content">
+              <span class="flagship-category">E-COMMERCE &amp; RETAIL</span>
+              <h3 class="flagship-card-title">Saawariya Mobile Store UI</h3>
+              <p class="flagship-card-desc">
+                A premium digital retail experience with 3D product showcase galleries, optimized shopping carts, responsive grids, and clean dark-mode transitions to guarantee peak interaction.
+              </p>
+              <div class="project-card-badges">
+                <span class="project-badge">E-Commerce Application</span>
+                <span class="project-badge">Interactive Code</span>
+                <span class="project-badge">UI/UX Layout</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 2: DEMO PRESENTATIONS (SPLIT COLUMN LAYOUT) -->
+      <section class="section-container" style="max-width: 1400px; padding: 0 2rem; margin-bottom: 2rem;">
+        <div class="section-header-center" style="margin-bottom: 4rem;">
+          <span class="section-tag" style="text-align: center;">CREATIVE OUTLINE</span>
+          <h2 class="section-title" style="text-align: center; font-size: clamp(2.2rem, 4.5vw, 3.2rem);">Demo Presentations</h2>
+          <p class="body-text" style="margin: 0 auto; text-align: center; max-width: 650px;">
+            Examine our graphic banner decks, flyers, and digital marketing presentations designed for various target audience interactions.
+          </p>
+        </div>
+      </section>
+
+      <!-- Interactive Split Section for Demo presentations -->
+      <section class="projects-split-container">
+        
+        <!-- Left: Interactive Project Details Card List -->
+        <div class="projects-list-column">
+          
+          <!-- Card 1: Sagar Mobile -->
+          <div class="project-card active" data-slide-index="0">
+            <div class="project-card-glow-bg"></div>
+            <div class="project-card-content">
+              <div class="project-card-meta">
+                <span class="project-card-category">BRANDING &amp; AD DESIGNS</span>
+                <span class="project-card-num">01 / 04</span>
+              </div>
+              <h2 class="project-card-title">Sagar Mobile Brand Outlines</h2>
+              <p class="project-card-desc">
+                High-converting graphics and social banner templates designed to highlight Sagar Mobile's digital presence. Focuses on premium device promos, speaker highlights, and actionable smartphone checkout layouts.
+              </p>
+              <div class="project-card-badges">
+                <span class="project-badge">Social Media Ads</span>
+                <span class="project-badge">Creative Assets</span>
+                <span class="project-badge">Outreach Banners</span>
+              </div>
+              <div class="project-card-cta">
+                <span>Show Presentation slide</span>
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: 4U Fashion -->
+          <div class="project-card" data-slide-index="1">
+            <div class="project-card-glow-bg"></div>
+            <div class="project-card-content">
+              <div class="project-card-meta">
+                <span class="project-card-category">APPAREL RETAIL BRANDING</span>
+                <span class="project-card-num">02 / 04</span>
+              </div>
+              <h2 class="project-card-title">4U Fashion Identity Kit</h2>
+              <p class="project-card-desc">
+                A gorgeous family store lookbook and catalog campaign concept. Combines trendy typography structures with structured suit showcase designs to generate brand affinity and offline store visits.
+              </p>
+              <div class="project-card-badges">
+                <span class="project-badge">Visual Identity</span>
+                <span class="project-badge">Collection Banners</span>
+                <span class="project-badge">Ad Copy Design</span>
+              </div>
+              <div class="project-card-cta">
+                <span>Show Presentation slide</span>
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: SMC Cafe -->
+          <div class="project-card" data-slide-index="2">
+            <div class="project-card-glow-bg"></div>
+            <div class="project-card-content">
+              <div class="project-card-meta">
+                <span class="project-card-category">CULINARY &amp; FOOD BRANDING</span>
+                <span class="project-card-num">03 / 04</span>
+              </div>
+              <h2 class="project-card-title">SMC Cafe Menu &amp; Marketing</h2>
+              <p class="project-card-desc">
+                Delicious food presentation layout assets tailored for local pizza and burger lovers. Uses rustic textures, delicious overlay typography, and crisp photography mockups to increase menu interest and outreach performance.
+              </p>
+              <div class="project-card-badges">
+                <span class="project-badge">Creative Assets</span>
+                <span class="project-badge">Menu Visuals</span>
+                <span class="project-badge">Instagram Ads</span>
+              </div>
+              <div class="project-card-cta">
+                <span>Show Presentation slide</span>
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Gulab Ganj -->
+          <div class="project-card" data-slide-index="3">
+            <div class="project-card-glow-bg"></div>
+            <div class="project-card-content">
+              <div class="project-card-meta">
+                <span class="project-card-category">HERITAGE RETAIL BRANDING</span>
+                <span class="project-card-num">04 / 04</span>
+              </div>
+              <h2 class="project-card-title">Gulab Ganj Rajasthani Fine Dining</h2>
+              <p class="project-card-desc">
+                Merging the authentic taste of royal Rajasthan with clean editorial templates. Includes heritage layouts, authentic color coding, and traditional typography to drive dining engagements.
+              </p>
+              <div class="project-card-badges">
+                <span class="project-badge">Graphic Banners</span>
+                <span class="project-badge">Brand Story</span>
+                <span class="project-badge">Marketing Graphics</span>
+              </div>
+              <div class="project-card-cta">
+                <span>Show Presentation slide</span>
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right: Sticky Slideshow Deck Player Column -->
+        <div class="deck-sticky-column">
+          
+          <div class="deck-player">
+            <!-- Active Slide Viewport Container -->
+            <div class="deck-viewport-wrapper">
+              <div class="deck-viewport" id="deck-slide-trigger">
+                <!-- Slide Banners -->
+                <img src="assets/sagar-mobile-presentation.png" alt="Sagar Mobile Presentation" class="deck-slide active" data-index="0">
+                <img src="assets/4u-fashion-presentation.png" alt="4U Fashion Presentation" class="deck-slide" data-index="1">
+                <img src="assets/smc-cafe-presentation.jpg" alt="SMC Cafe Presentation" class="deck-slide" data-index="2">
+                <img src="assets/gulab-ganj-presentation.jpg" alt="Gulab Ganj Presentation" class="deck-slide" data-index="3">
+                
+                <!-- Zoom Cue Hover Overlay -->
+                <div class="deck-viewport-overlay">
+                  <div class="deck-zoom-icon">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5">
+                      <circle cx="11" cy="11" r="8"></circle>
+                      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                      <line x1="11" y1="8" x2="11" y2="14"></line>
+                      <line x1="8" y1="11" x2="14" y2="11"></line>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slideshow controls (Arrows & Counter) -->
+            <div class="deck-controls">
+              <div class="deck-counter" id="deck-slide-counter">01 / 04</div>
+              <div class="deck-btn-group">
+                <button class="deck-btn" id="deck-prev-btn" aria-label="Previous Slide">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                  </svg>
+                </button>
+                <button class="deck-btn" id="deck-next-btn" aria-label="Next Slide">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Active Deck Slide Detailed Info Box -->
+            <div class="deck-info-box">
+              <h3 class="deck-info-title" id="deck-title-target">Sagar Mobile Banners</h3>
+              <p class="deck-info-desc" id="deck-desc-target">
+                Premium poster structures highlighting speaker retail promos and Android/iPhone deals, designed for maximum local audience performance.
+              </p>
+            </div>
+
+            <!-- Thumbnail Selector Grid -->
+            <div class="deck-thumbnails">
+              <div class="deck-thumb active" data-index="0">
+                <img src="assets/sagar-mobile-presentation.png" alt="Sagar Mobile Slide Preview">
+              </div>
+              <div class="deck-thumb" data-index="1">
+                <img src="assets/4u-fashion-presentation.png" alt="4U Fashion Slide Preview">
+              </div>
+              <div class="deck-thumb" data-index="2">
+                <img src="assets/smc-cafe-presentation.jpg" alt="SMC Cafe Slide Preview">
+              </div>
+              <div class="deck-thumb" data-index="3">
+                <img src="assets/gulab-ganj-presentation.jpg" alt="Gulab Ganj Slide Preview">
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </main>
+
+    <!-- Global Footer -->
+    <footer id="footer">
+      <div class="footer-cta-container">
+        <span class="footer-tag">ARE YOU READY?</span>
+        <h2 class="footer-cta-title" id="footer-cta-glow" onclick="window.location.href='index.html#footer'">Let's Build Something</h2>
+        <div class="animated-line"></div>
+      </div>
+
+      <div class="footer-links-grid">
+        <div class="footer-col info-col">
+          <a href="index.html#hero" class="footer-logo">
+            <svg viewBox="0 0 100 100" class="logo-svg">
+              <polygon points="50,15 80,75 20,75" class="logo-triangle-outer"></polygon>
+              <polygon points="50,35 68,70 32,70" class="logo-triangle-inner"></polygon>
+            </svg>
+            <span class="footer-logo-text">ASTRIA &amp; CO.</span>
+          </a>
+          <p class="footer-col-desc">Diverting World Digitally with bespoke immersive layouts, bold brands, and advanced web concepts.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">NAVIGATION</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html#hero">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#process">Process</a></li>
+            <li><a href="projects.html">Work</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">CONNECT</h4>
+          <ul class="footer-links-list">
+            <li><a href="mailto:astriacreative.co@gmail.com">Gmail</a></li>
+            <li><a href="https://instagram.com/astriacreative.co" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            <li><a href="https://wa.me/918278455700" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">STUDIO</h4>
+          <p class="footer-address">
+            Narnaul,<br>
+            Haryana, India
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright-text">Astria &amp; Co. © 2026 — Diverting World Digitally</p>
+        <div class="powered-by-wrapper">
+          <a href="https://instagram.com/Aryan5oni" target="_blank" rel="noopener noreferrer" class="powered-by-link">
+            <span class="powered-text">Co-Powered by</span>
+            <span class="powered-name-wrapper">
+              <span class="powered-name">Aryan</span>
+              <span class="powered-glow-dot"></span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- FULLSCREEN LIGHTBOX MODAL OVERLAY -->
+  <div class="lightbox-modal" id="lightbox-modal-overlay">
+    <div class="lightbox-content-wrapper">
+      <button class="lightbox-close" id="lightbox-close-btn" aria-label="Close Lightbox">&times;</button>
+      
+      <!-- Navigation overlays for convenience -->
+      <button class="lightbox-nav-btn lightbox-prev" id="lightbox-modal-prev" aria-label="Previous image">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+      </button>
+      <button class="lightbox-nav-btn lightbox-next" id="lightbox-modal-next" aria-label="Next image">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </button>
+
+      <img src="assets/sagar-mobile-presentation.png" alt="Expanded Presentation Slide" class="lightbox-image" id="lightbox-target-img">
+      <div class="lightbox-title" id="lightbox-target-title">Sagar Mobile Banners</div>
+      
+      <!-- Responsive inline navigation (appears under the image in stacked layout) -->
+      <div class="lightbox-nav-buttons-mobile" style="display: none;">
+        <button class="deck-btn" id="lightbox-prev-btn-mobile">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
+        <button class="deck-btn" id="lightbox-next-btn-mobile">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript Libraries -->
+  <!-- GSAP & ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <!-- Lenis.js (Smooth Scroll) -->
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <!-- Vanilla Tilt (3D Tilting Cards) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+
+  <script>
+    // Register GSAP ScrollTrigger
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Presentation Slide Data Source (Only contains the 4 demo presentations)
+    const slideData = [
+      {
+        title: "Sagar Mobile Banners",
+        desc: "Premium poster structures highlighting speaker retail promos and Android/iPhone deals, designed for maximum local audience performance.",
+        src: "assets/sagar-mobile-presentation.png"
+      },
+      {
+        title: "4U Fashion Collection Launch",
+        desc: "Visual lookbook designs created for 4U Fashion apparel collections. Integrates engaging product cards and clean color codes for modern consumer appeal.",
+        src: "assets/4u-fashion-presentation.png"
+      },
+      {
+        title: "SMC Cafe Creative Assets",
+        desc: "Warm retro templates for cafe flyers. Showcases menus, wraps, and specialty items framed by typography guidelines to capture culinary interest.",
+        src: "assets/smc-cafe-presentation.jpg"
+      },
+      {
+        title: "Gulab Ganj Rajasthani Dining",
+        desc: "Traditional cultural assets combined with clean marketing copy grids to represent Rajasthani dine-in experiences, styled for a modern audience.",
+        src: "assets/gulab-ganj-presentation.jpg"
+      }
+    ];
+
+    let activeIndex = 0;
+    let lenisInstance;
+
+    document.addEventListener('DOMContentLoaded', () => {
+      // Initialize Smooth Scroll
+      initLenis();
+
+      // Initialize Card Glow Listeners
+      initCardSpotlightGlows();
+
+      // Initialize Tilt effects on cards
+      initCardTilts();
+
+      // Hook up UI Event Listeners
+      initDeckController();
+    });
+
+    /* ==================================================
+       1. SMOOTH SCROLL (LENIS)
+       ================================================== */
+    function initLenis() {
+      lenisInstance = new Lenis({
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        smooth: true,
+        mouseMultiplier: 1,
+        smoothTouch: false
+      });
+
+      lenisInstance.on('scroll', ScrollTrigger.update);
+
+      gsap.ticker.add((time) => {
+        lenisInstance.raf(time * 1000);
+      });
+
+      gsap.ticker.lagSmoothing(0);
+    }
+
+    /* ==================================================
+       2. MOUSE TRACKING SPOTLIGHT GLOW
+       ================================================== */
+    function initCardSpotlightGlows() {
+      const cards = document.querySelectorAll('.project-card, .flagship-card');
+      cards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+          const rect = card.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+          card.style.setProperty('--mouse-x', `${x}px`);
+          card.style.setProperty('--mouse-y', `${y}px`);
+        });
+      });
+    }
+
+    /* ==================================================
+       3. 3D CARD TILT (VANILLA TILT)
+       ================================================== */
+    function initCardTilts() {
+      const cards = document.querySelectorAll('.project-card, .flagship-card');
+      VanillaTilt.init(cards, {
+        max: 6,
+        speed: 400,
+        glare: true,
+        "max-glare": 0.15
+      });
+    }
+
+    /* ==================================================
+       4. DECK PLAYER CONTROLLER
+       ================================================== */
+    function initDeckController() {
+      const slides = document.querySelectorAll('.deck-slide');
+      const thumbnails = document.querySelectorAll('.deck-thumb');
+      const cards = document.querySelectorAll('.project-card');
+      
+      const counterText = document.getElementById('deck-slide-counter');
+      const infoTitle = document.getElementById('deck-title-target');
+      const infoDesc = document.getElementById('deck-desc-target');
+      
+      const prevBtn = document.getElementById('deck-prev-btn');
+      const nextBtn = document.getElementById('deck-next-btn');
+
+      // Lightbox selectors
+      const slideTrigger = document.getElementById('deck-slide-trigger');
+      const lightboxOverlay = document.getElementById('lightbox-modal-overlay');
+      const lightboxClose = document.getElementById('lightbox-close-btn');
+      const lightboxImg = document.getElementById('lightbox-target-img');
+      const lightboxTitle = document.getElementById('lightbox-target-title');
+      
+      const lightboxPrev = document.getElementById('lightbox-modal-prev');
+      const lightboxNext = document.getElementById('lightbox-modal-next');
+      const lightboxPrevMobile = document.getElementById('lightbox-prev-btn-mobile');
+      const lightboxNextMobile = document.getElementById('lightbox-next-btn-mobile');
+
+      // Check for mobile layout for nav button adjustments
+      const handleMobileNavDisplay = () => {
+        const mobileButtons = document.querySelector('.lightbox-nav-buttons-mobile');
+        if (window.innerWidth <= 1100) {
+          if (mobileButtons) mobileButtons.style.display = 'flex';
+          if (lightboxPrev) lightboxPrev.style.display = 'none';
+          if (lightboxNext) lightboxNext.style.display = 'none';
+        } else {
+          if (mobileButtons) mobileButtons.style.display = 'none';
+          if (lightboxPrev) lightboxPrev.style.display = 'flex';
+          if (lightboxNext) lightboxNext.style.display = 'flex';
+        }
+      };
+      
+      window.addEventListener('resize', handleMobileNavDisplay);
+      handleMobileNavDisplay();
+
+      // Main update handler
+      function updateActiveSlide(newIndex, scrollCard = false) {
+        if (newIndex < 0 || newIndex >= slideData.length) return;
+        
+        activeIndex = newIndex;
+
+        // 1. Update Slides classes
+        slides.forEach((slide, idx) => {
+          if (idx === activeIndex) {
+            slide.classList.add('active');
+          } else {
+            slide.classList.remove('active');
+          }
+        });
+
+        // 2. Update Thumbnails active classes
+        thumbnails.forEach((thumb, idx) => {
+          if (idx === activeIndex) {
+            thumb.classList.add('active');
+          } else {
+            thumb.classList.remove('active');
+          }
+        });
+
+        // 3. Update Left-Side Cards active state
+        cards.forEach((card, idx) => {
+          if (idx === activeIndex) {
+            card.classList.add('active');
+            if (scrollCard) {
+              card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+          } else {
+            card.classList.remove('active');
+          }
+        });
+
+        // 4. Update Texts & Info Box
+        counterText.textContent = `0${activeIndex + 1} / 0${slideData.length}`;
+        
+        // Premium GSAP text fade-in transitions
+        gsap.fromTo([infoTitle, infoDesc], 
+          { opacity: 0, y: 10 },
+          { opacity: 1, y: 0, duration: 0.4, stagger: 0.1, ease: "power2.out" }
+        );
+        
+        infoTitle.textContent = slideData[activeIndex].title;
+        infoDesc.textContent = slideData[activeIndex].desc;
+
+        // 5. Sync Lightbox content if open
+        if (lightboxOverlay.classList.contains('open')) {
+          lightboxImg.src = slideData[activeIndex].src;
+          lightboxTitle.textContent = slideData[activeIndex].title;
+        }
+      }
+
+      // Event Listener: Card Click
+      cards.forEach((card, idx) => {
+        card.addEventListener('click', () => {
+          updateActiveSlide(idx);
+          // If on desktop, scroll window slightly to align presentation panel nicely
+          if (window.innerWidth > 1100 && lenisInstance) {
+            // Scroll to center card slightly
+            lenisInstance.scrollTo(card, { offset: -160, duration: 1 });
+          }
+        });
+      });
+
+      // Event Listener: Thumbnail Click
+      thumbnails.forEach((thumb, idx) => {
+        thumb.addEventListener('click', () => {
+          updateActiveSlide(idx, true);
+        });
+      });
+
+      // Controls: Next / Prev buttons
+      prevBtn.addEventListener('click', () => {
+        let prevIndex = activeIndex - 1;
+        if (prevIndex < 0) prevIndex = slideData.length - 1; // loop around
+        updateActiveSlide(prevIndex, true);
+      });
+
+      nextBtn.addEventListener('click', () => {
+        let nextIndex = activeIndex + 1;
+        if (nextIndex >= slideData.length) nextIndex = 0; // loop around
+        updateActiveSlide(nextIndex, true);
+      });
+
+      /* ==================================================
+         5. LIGHTBOX OVERLAY CONTROLLER
+         ================================================== */
+      function openLightbox() {
+        lightboxImg.src = slideData[activeIndex].src;
+        lightboxTitle.textContent = slideData[activeIndex].title;
+        lightboxOverlay.classList.add('open');
+        
+        // Prevent background scrolling while zoom is active
+        if (lenisInstance) lenisInstance.stop();
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeLightbox() {
+        lightboxOverlay.classList.remove('open');
+        
+        // Re-enable smooth scroll
+        if (lenisInstance) lenisInstance.start();
+        document.body.style.overflow = '';
+      }
+
+      slideTrigger.addEventListener('click', openLightbox);
+      lightboxClose.addEventListener('click', closeLightbox);
+      
+      // Close lightbox on clicking dark overlay outside container wrapper
+      lightboxOverlay.addEventListener('click', (e) => {
+        if (e.target === lightboxOverlay) {
+          closeLightbox();
+        }
+      });
+
+      // Lightbox Next/Prev actions
+      function nextLightbox() {
+        let nextIndex = activeIndex + 1;
+        if (nextIndex >= slideData.length) nextIndex = 0;
+        updateActiveSlide(nextIndex, true);
+      }
+
+      function prevLightbox() {
+        let prevIndex = activeIndex - 1;
+        if (prevIndex < 0) prevIndex = slideData.length - 1;
+        updateActiveSlide(prevIndex, true);
+      }
+
+      lightboxPrev.addEventListener('click', prevLightbox);
+      lightboxNext.addEventListener('click', nextLightbox);
+      lightboxPrevMobile.addEventListener('click', prevLightbox);
+      lightboxNextMobile.addEventListener('click', nextLightbox);
+
+      // Keyboard arrow shortcuts inside modal
+      document.addEventListener('keydown', (e) => {
+        if (!lightboxOverlay.classList.contains('open')) return;
+        
+        if (e.key === "ArrowRight") {
+          nextLightbox();
+        } else if (e.key === "ArrowLeft") {
+          prevLightbox();
+        } else if (e.key === "Escape") {
+          closeLightbox();
+        }
+      });
+    }
+  </script>
+</body>
+</html>
