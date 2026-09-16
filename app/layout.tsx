@@ -17,7 +17,10 @@ export const metadata: Metadata = {
   keywords:
     "digital agency, web development, graphic design, Meta ads, marketing automation, sales funnels, video editing",
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/icon.svg", type: "image/svg+xml" },
+    ],
     apple: "/apple-touch-icon.png",
   },
 };
