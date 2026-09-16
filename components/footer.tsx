@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Mail, Phone, MapPin } from "lucide-react";
+import { AstriaLogoMark } from "@/components/ui/astria-logo";
 
 export function Footer() {
   return (
@@ -8,9 +9,9 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
           {/* Brand Column */}
           <div className="lg:col-span-2 max-w-sm">
-            <Link href="/" className="flex items-center gap-3 text-lg font-bold tracking-wide text-white mb-4">
-              <span className="w-8 h-8 bg-brand rounded-lg flex items-center justify-center text-white text-xs font-extrabold">
-                A
+            <Link href="/" className="flex items-center gap-3 text-lg font-bold tracking-wide text-white mb-4 group">
+              <span className="w-8 h-8 bg-[#2D4532] border border-emerald-500/20 rounded-lg flex items-center justify-center text-white shadow-sm group-hover:scale-105 transition-transform">
+                <AstriaLogoMark className="w-4.5 h-4.5 text-white" />
               </span>
               Astria &amp; Co.
             </Link>

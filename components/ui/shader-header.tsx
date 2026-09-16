@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import { ArrowRight, Sparkles } from "lucide-react";
+import { AstriaLogoMark } from "@/components/ui/astria-logo";
 
 // Dynamically import MeshGradient from @paper-design/shaders-react to ensure safe client-only execution
 const MeshGradient = dynamic(
@@ -97,10 +98,10 @@ export function ShaderHeader({
           <div className="flex items-center gap-3">
             <a
               href="#"
-              className="w-10 h-10 rounded-2xl bg-white/10 hover:bg-white/15 border border-white/20 backdrop-blur-md flex items-center justify-center text-white font-bold text-base shadow-sm transition-all duration-200 hover:scale-105"
+              className="w-10 h-10 rounded-2xl bg-white/10 hover:bg-white/15 border border-white/20 backdrop-blur-md flex items-center justify-center text-white shadow-sm transition-all duration-200 hover:scale-105"
               aria-label="Astria & Co."
             >
-              A
+              <AstriaLogoMark className="w-5 h-5 text-white" />
             </a>
 
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full border border-white/15 bg-white/10 backdrop-blur-md text-white/90 text-[11px] sm:text-xs font-medium tracking-wide shadow-sm">
@@ -216,10 +217,10 @@ export function ShaderHeader({
               </svg>
             </div>
 
-            {/* Center Multi-Color Glowing Orb */}
-            <div className="relative w-10 h-10 sm:w-12 sm:h-12 rounded-full p-[2px] bg-gradient-to-tr from-emerald-400 via-[#567D4A] to-[#C9A84C] animate-[spin_6s_linear_infinite] shadow-[0_0_24px_rgba(86,125,74,0.6)]">
+            {/* Center Astria Logo Seal */}
+            <div className="relative w-10 h-10 sm:w-12 sm:h-12 rounded-full p-[2px] bg-gradient-to-tr from-emerald-400 via-[#567D4A] to-[#C9A84C] shadow-[0_0_24px_rgba(86,125,74,0.6)]">
               <div className="w-full h-full rounded-full bg-[#0C120C] flex items-center justify-center overflow-hidden">
-                <div className="w-5 h-5 rounded-full bg-gradient-to-br from-emerald-300 via-[#C9A84C] to-emerald-600 blur-[2px] animate-pulse" />
+                <AstriaLogoMark className="w-5 h-5 text-emerald-300 transition-transform duration-300 group-hover:scale-110" />
               </div>
             </div>
           </div>

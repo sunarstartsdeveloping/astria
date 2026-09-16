@@ -13,6 +13,7 @@ import {
   ShieldCheck,
   Send,
 } from "lucide-react";
+import { AstriaLogoMark } from "@/components/ui/astria-logo";
 
 const SERVICES = [
   "Web App Development",
@@ -286,9 +287,9 @@ export function ConsultationModal() {
             <div className="p-6 sm:p-8 pb-4 border-b border-white/10 bg-[#0F1410]/50">
               <div className="flex items-center justify-between gap-3 mb-3">
                 <div className="flex items-center gap-3">
-                  <svg className="w-8 h-8" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M20 6 L27 26 L22 26 L20.6 21 L19.4 21 L18 26 L13 26 Z" fill="#10B981" />
-                  </svg>
+                  <span className="w-8 h-8 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
+                    <AstriaLogoMark className="w-4.5 h-4.5 text-emerald-400" />
+                  </span>
                   <span className="text-xs uppercase tracking-widest text-emerald-400 font-semibold">
                     Free Strategy Consultation
                   </span>

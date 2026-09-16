@@ -16,6 +16,10 @@ export const metadata: Metadata = {
     "Astria & Co. is a modern digital agency offering web development, graphic design, sales funnels, Meta ads management, video editing, and marketing automation.",
   keywords:
     "digital agency, web development, graphic design, Meta ads, marketing automation, sales funnels, video editing",
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

@@ -4,6 +4,7 @@ import React, { ReactNode } from "react";
 import Link from "next/link";
 import { ArrowLeft, ShieldCheck, Mail, Phone, MapPin, ExternalLink } from "lucide-react";
 import { Footer } from "@/components/footer";
+import { AstriaLogoMark } from "@/components/ui/astria-logo";
 
 interface LegalPageLayoutProps {
   title: string;
@@ -34,8 +35,8 @@ export function LegalPageLayout({
       <header className="sticky top-0 z-40 h-[68px] border-b border-white/10 bg-[#0A0D0A]/90 backdrop-blur-2xl px-6 flex items-center justify-between">
         <div className="max-w-[1140px] mx-auto w-full flex items-center justify-between">
           <Link href="/" className="flex items-center gap-3 text-lg font-bold tracking-wide text-white group">
-            <span className="w-8 h-8 bg-brand rounded-lg flex items-center justify-center text-white text-xs font-extrabold shadow-sm group-hover:scale-105 transition-transform">
-              A
+            <span className="w-8 h-8 bg-[#2D4532] border border-emerald-500/20 rounded-lg flex items-center justify-center text-white shadow-sm group-hover:scale-105 transition-transform">
+              <AstriaLogoMark className="w-4.5 h-4.5 text-white" />
             </span>
             Astria &amp; Co.
           </Link>
