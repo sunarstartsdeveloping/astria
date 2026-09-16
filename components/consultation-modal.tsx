@@ -104,6 +104,18 @@ export function ConsultationModal() {
     return () => window.removeEventListener("pageshow", handlePageShow);
   }, []);
 
+  // Lock body scroll when modal is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
+
   const handleClose = () => {
     resetForm();
     closeConsultation();
@@ -199,7 +211,7 @@ export function ConsultationModal() {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-5 overflow-y-auto bg-black/80 backdrop-blur-md transition-all">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-5 overflow-y-auto bg-black/80 backdrop-blur-md transition-all">
       {/* Click backdrop to close and reset */}
       <div
         className="fixed inset-0"
@@ -216,10 +228,10 @@ export function ConsultationModal() {
         {/* Modal Close Button */}
         <button
           onClick={handleClose}
-          className="absolute top-5 right-5 z-20 w-9 h-9 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 flex items-center justify-center text-white/70 hover:text-white transition-colors cursor-pointer"
+          className="absolute top-4 right-4 sm:top-5 sm:right-5 z-20 w-10 h-10 rounded-full bg-white/10 hover:bg-white/15 active:scale-95 border border-white/15 flex items-center justify-center text-white/80 hover:text-white transition-all cursor-pointer"
           aria-label="Close form"
         >
-          <X size={18} />
+          <X size={20} />
         </button>
 
         {isSuccess ? (
@@ -281,12 +293,12 @@ export function ConsultationModal() {
           </div>
         ) : (
           /* Form Screen */
-          <div className="max-h-[85vh] overflow-y-auto custom-scrollbar">
+          <div className="max-h-[88dvh] sm:max-h-[85vh] overflow-y-auto custom-scrollbar overscroll-contain">
             
             {/* Header */}
-            <div className="p-6 sm:p-8 pb-4 border-b border-white/10 bg-[#0F1410]/50">
+            <div className="p-5 sm:p-8 pb-4 border-b border-white/10 bg-[#0F1410]/50">
               <div className="flex items-center justify-between gap-3 mb-3">
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-2.5 sm:gap-3">
                   <span className="w-8 h-8 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
                     <AstriaLogoMark className="w-4.5 h-4.5 text-emerald-400" />
                   </span>
@@ -320,7 +332,7 @@ export function ConsultationModal() {
             <form onSubmit={handleSubmit} autoComplete="off" className="divide-y divide-white/10">
               
               {/* Section 1: Who you are */}
-              <div className="p-6 sm:p-8 space-y-4">
+              <div className="p-5 sm:p-8 space-y-4">
                 <div>
                   <h2 className="text-xs uppercase font-bold tracking-wider text-emerald-400">
                     Who you are

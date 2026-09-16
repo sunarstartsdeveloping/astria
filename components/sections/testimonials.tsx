@@ -140,7 +140,8 @@ export function Testimonials() {
 
       {/* Subtle indicator under marquee */}
       <div className="text-center mt-6 text-xs text-white/40">
-        <span>Hover over any review to pause</span>
+        <span className="hidden sm:inline">Hover over any review to pause</span>
+        <span className="sm:hidden">Touch any review to pause</span>
       </div>
     </section>
   );

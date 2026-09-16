@@ -123,20 +123,20 @@ function HarmonicCard({
       style={{ x, y, rotate, scale }}
       className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 cursor-pointer pointer-events-auto group"
     >
-      <div className="relative w-[210px] sm:w-[270px] md:w-[330px] aspect-[16/9] rounded-2xl overflow-hidden border border-white/20 bg-[#121512] shadow-[0_12px_36px_rgba(0,0,0,0.6)] transition-all duration-300 group-hover:scale-105 group-hover:border-emerald-400/70 group-hover:shadow-[0_16px_50px_rgba(86,125,74,0.35)]">
+      <div className="relative w-[170px] xs:w-[210px] sm:w-[270px] md:w-[330px] aspect-[16/9] rounded-xl sm:rounded-2xl overflow-hidden border border-white/20 bg-[#121512] shadow-[0_12px_36px_rgba(0,0,0,0.6)] transition-all duration-300 group-hover:scale-105 group-hover:border-emerald-400/70 group-hover:shadow-[0_16px_50px_rgba(86,125,74,0.35)]">
         <Image
           src={item.image}
           alt={item.title}
           fill
-          sizes="(max-width: 640px) 210px, (max-width: 768px) 270px, 330px"
+          sizes="(max-width: 640px) 190px, (max-width: 768px) 270px, 330px"
           className="object-cover transition-transform duration-500 group-hover:scale-105"
         />
-        {/* Hover overlay with title */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3.5">
-          <span className="text-[10px] font-semibold text-emerald-300 uppercase tracking-wider">
+        {/* Title overlay (always visible on mobile touch, hover on desktop) */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-2.5 sm:p-3.5">
+          <span className="text-[9px] sm:text-[10px] font-semibold text-emerald-300 uppercase tracking-wider">
             {item.category}
           </span>
-          <span className="text-xs font-bold text-white truncate">
+          <span className="text-[11px] sm:text-xs font-bold text-white truncate">
             {item.title}
           </span>
         </div>
@@ -184,7 +184,7 @@ export function HarmonicWave({
           style={{ opacity: textOpacity, scale: textScale, y: textY }}
           className="relative z-10 text-center max-w-4xl px-6 pointer-events-none select-none flex flex-col items-center justify-center"
         >
-          <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-4 text-white leading-tight whitespace-nowrap">
+          <h2 className="text-2xl xs:text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-3 sm:mb-4 text-white leading-tight whitespace-normal sm:whitespace-nowrap">
             {title}{" "}
             <span className="text-[#567D4A] drop-shadow-[0_0_28px_rgba(86,125,74,0.5)]">
               {highlightWord}

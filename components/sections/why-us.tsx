@@ -46,7 +46,7 @@ export function WhyUs() {
                   Customizable
                 </h3>
                 <p className="text-sm text-white/60 leading-relaxed">
-                  Provident fugit and vero voluptate. magnam magni doloribus dolores voluptates a sapiente nisi.
+                  Tailored architectures engineered specifically for your brand identity, conversion metrics, and business model.
                 </p>
               </div>
             </div>
@@ -68,7 +68,7 @@ export function WhyUs() {
                   Secure by default
                 </h3>
                 <p className="text-sm text-white/60 leading-relaxed">
-                  Provident fugit and vero voluptate. magnam magni doloribus dolores voluptates a sapiente nisi.
+                  Enterprise security standards, encrypted communications, and automated safeguards protecting your critical data.
                 </p>
               </div>
             </div>
@@ -119,7 +119,7 @@ export function WhyUs() {
                   Faster than light
                 </h3>
                 <p className="text-sm text-white/60 leading-relaxed">
-                  Provident fugit vero voluptate. magnam magni doloribus dolores voluptates inventore nisi.
+                  Sub-second page speeds, edge caching, and optimized digital assets delivering frictionless user experiences.
                 </p>
               </div>
             </div>
@@ -138,10 +138,10 @@ export function WhyUs() {
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-white tracking-tight mb-2">
-                      Faster than light
+                      High-Velocity Execution
                     </h3>
                     <p className="text-xs text-white/60 leading-relaxed">
-                      Provident fugit vero voluptate. Voluptates a sapiente nisi.
+                      Agile delivery sprints, rapid prototyping, and transparent milestones without bureaucratic delays.
                     </p>
                   </div>
                 </div>
@@ -190,10 +190,10 @@ export function WhyUs() {
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-white tracking-tight mb-2">
-                      Keep your loved ones safe
+                      Dedicated Expert Team
                     </h3>
                     <p className="text-xs text-white/60 leading-relaxed">
-                      Voluptate. magnam magni doloribus dolores voluptates a sapiente nisi.
+                      Direct collaborative access to senior engineers, designers, and growth architects on every sprint.
                     </p>
                   </div>
                 </div>

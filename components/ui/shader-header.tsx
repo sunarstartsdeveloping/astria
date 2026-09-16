@@ -151,54 +151,54 @@ export function ShaderHeader({
         </header>
 
         {/* Center-Left Content Area */}
-        <div className="relative z-10 max-w-3xl my-auto py-6 sm:py-8">
+        <div className="relative z-10 max-w-3xl my-auto py-4 sm:py-8">
           {/* Signature 3-Tier Typography */}
-          <h1 className="flex flex-col tracking-tight text-white mb-5 select-none">
+          <h1 className="flex flex-col tracking-tight text-white mb-4 sm:mb-5 select-none">
             {/* Tier 1: Soft Luminous Tint */}
-            <span className="text-4xl sm:text-6xl lg:text-[72px] font-normal tracking-[-0.015em] text-[#A7F3D0] drop-shadow-[0_0_35px_rgba(74,222,128,0.4)] leading-[1.05]">
+            <span className="text-[32px] xs:text-[42px] sm:text-6xl lg:text-[72px] font-normal tracking-[-0.015em] text-[#A7F3D0] drop-shadow-[0_0_35px_rgba(74,222,128,0.4)] leading-[1.08] sm:leading-[1.05]">
               {word1}
             </span>
 
             {/* Tier 2: Solid Giant Bold Sans */}
-            <span className="text-5xl sm:text-7xl lg:text-[92px] font-extrabold tracking-[-0.035em] text-white leading-[0.98] drop-shadow-md">
+            <span className="text-[42px] xs:text-[54px] sm:text-7xl lg:text-[92px] font-extrabold tracking-[-0.035em] text-white leading-[1.0] sm:leading-[0.98] drop-shadow-md">
               {word2}
             </span>
 
             {/* Tier 3: Flowing Elegant Italic Serif */}
-            <span className="text-5xl sm:text-7xl lg:text-[88px] font-serif italic font-normal tracking-[-0.02em] text-white/95 leading-[1.05] drop-shadow-sm">
+            <span className="text-[38px] xs:text-[50px] sm:text-7xl lg:text-[88px] font-serif italic font-normal tracking-[-0.02em] text-white/95 leading-[1.08] sm:leading-[1.05] drop-shadow-sm">
               {word3}
             </span>
           </h1>
 
           {/* Subtitle / Paragraph */}
-          <p className="text-sm sm:text-base lg:text-lg text-white/80 leading-relaxed max-w-xl font-normal mb-7 sm:mb-9 drop-shadow-sm">
+          <p className="text-xs xs:text-sm sm:text-base lg:text-lg text-white/80 leading-relaxed max-w-xl font-normal mb-6 sm:mb-9 drop-shadow-sm">
             {description}
           </p>
 
           {/* Call to Action Buttons */}
-          <div className="flex flex-wrap items-center gap-4">
-            {/* Frosted Glass Secondary Button */}
-            <a
-              href={secondaryCtaLink}
-              className="inline-flex items-center justify-center px-6 py-3 sm:px-7 sm:py-3.5 rounded-full border border-white/20 bg-white/10 hover:bg-white/15 backdrop-blur-md text-white font-semibold text-xs sm:text-sm tracking-wide transition-all duration-200 shadow-sm hover:border-white/35"
-            >
-              {secondaryCtaText}
-            </a>
-
+          <div className="flex flex-col xs:flex-row items-stretch xs:items-center gap-3 sm:gap-4 w-full sm:w-auto">
             {/* Vibrant Astria Brand Gradient Primary Button */}
             <button
               type="button"
               data-open-consultation="true"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 sm:px-8 sm:py-3.5 rounded-full bg-gradient-to-r from-emerald-500 via-[#567D4A] to-[#C9A84C] hover:from-emerald-400 hover:to-[#D4AF37] text-white font-semibold text-xs sm:text-sm tracking-wide shadow-[0_10px_35px_rgba(86,125,74,0.4)] hover:shadow-[0_15px_45px_rgba(201,168,76,0.45)] transition-all duration-200 hover:scale-105 active:scale-95 cursor-pointer"
+              className="w-full xs:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 sm:px-8 sm:py-3.5 rounded-full bg-gradient-to-r from-emerald-500 via-[#567D4A] to-[#C9A84C] hover:from-emerald-400 hover:to-[#D4AF37] text-white font-semibold text-xs sm:text-sm tracking-wide shadow-[0_10px_35px_rgba(86,125,74,0.4)] hover:shadow-[0_15px_45px_rgba(201,168,76,0.45)] transition-all duration-200 hover:scale-105 active:scale-95 cursor-pointer"
             >
               {primaryCtaText}
               <ArrowRight size={15} />
             </button>
+
+            {/* Frosted Glass Secondary Button */}
+            <a
+              href={secondaryCtaLink}
+              className="w-full xs:w-auto inline-flex items-center justify-center px-6 py-3 sm:px-7 sm:py-3.5 rounded-full border border-white/20 bg-white/10 hover:bg-white/15 backdrop-blur-md text-white font-semibold text-xs sm:text-sm tracking-wide transition-all duration-200 shadow-sm hover:border-white/35 active:scale-95"
+            >
+              {secondaryCtaText}
+            </a>
           </div>
         </div>
 
-        {/* Bottom Right Decorative Rotating Circular Stamp / Seal (Pinned to corner) */}
-        <div className="absolute bottom-6 right-6 sm:bottom-10 sm:right-10 z-10 select-none group cursor-pointer">
+        {/* Bottom Right Decorative Rotating Circular Stamp / Seal (Visible on desktop & tablet) */}
+        <div className="hidden sm:flex absolute bottom-6 right-6 sm:bottom-10 sm:right-10 z-10 select-none group cursor-pointer">
           <div className="relative w-24 h-24 sm:w-28 sm:h-28 flex items-center justify-center">
             {/* Rotating Circular Text SVG */}
             <div className="absolute inset-0 animate-[spin_20s_linear_infinite] group-hover:animate-[spin_8s_linear_infinite] transition-all duration-500">
