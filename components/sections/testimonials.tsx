@@ -37,7 +37,7 @@ const testimonials: Testimonial[] = [
     role: "Freelancer & Creator",
     company: "Creative Technologist",
     handle: "@raojatin",
-    avatar: "/testimonials/himanshu-soni.jpg",
+    avatar: "/testimonials/rao-jatin.png",
     quote:
       "Loved 3D designs of web pages provided by Astria & Co.",
     metric: "3D Web Engineering",
@@ -47,7 +47,7 @@ const testimonials: Testimonial[] = [
     role: "Jewellery Designer",
     company: "PCVK",
     handle: "@himanshusoni2324",
-    avatar: "/testimonials/rao-jatin.png",
+    avatar: "/testimonials/himanshu-soni.jpg",
     quote:
       "Got my 80% of problems solved just by WhatsApp automation, appreciate 👏",
     metric: "80% Workflows Automated",
