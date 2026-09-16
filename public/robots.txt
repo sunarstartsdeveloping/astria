@@ -1,0 +1,36 @@
+# ==================================================
+# Astria & Co. — Robots.txt
+# Domain: https://www.astria.co.in/
+# ==================================================
+
+# Default crawler access
+User-agent: *
+Allow: /
+
+# AI Answer Engines & Generative AI Crawlers (AEO / GEO)
+User-agent: Google-Extended
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.astria.co.in/sitemap.xml
