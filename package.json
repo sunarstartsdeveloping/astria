@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "deploy": "next build && npx gh-pages -d out -t --nojekyll",
     "start": "next start",
     "lint": "eslint"
   },
