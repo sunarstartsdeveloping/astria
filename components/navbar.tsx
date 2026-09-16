@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import { AstriaLogoMark } from "@/components/ui/astria-logo";
 
 const navItems = [
   { label: "Services", href: "#services" },
@@ -31,11 +30,8 @@ export function Navbar() {
         } bg-[#0A0D0A]/90 text-white`}
       >
         <div className="max-w-[1140px] mx-auto px-6 h-full flex items-center justify-between">
-          {/* Logo */}
-          <a href="#" className="flex items-center gap-3 text-lg font-bold tracking-wide text-white group">
-            <span className="w-8 h-8 bg-[#2D4532] border border-emerald-500/20 rounded-lg flex items-center justify-center text-white shadow-sm group-hover:scale-105 transition-transform">
-              <AstriaLogoMark className="w-4.5 h-4.5 text-white" />
-            </span>
+          {/* Brand Title */}
+          <a href="#" className="text-lg font-bold tracking-tight text-white hover:text-emerald-400 transition-colors">
             Astria &amp; Co.
           </a>
 
