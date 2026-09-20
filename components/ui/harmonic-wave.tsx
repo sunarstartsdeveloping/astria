@@ -126,7 +126,7 @@ function HarmonicCard({
       <div className="relative w-[170px] xs:w-[210px] sm:w-[270px] md:w-[330px] aspect-[16/9] rounded-xl sm:rounded-2xl overflow-hidden border border-white/20 bg-[#121512] shadow-[0_12px_36px_rgba(0,0,0,0.6)] transition-all duration-300 group-hover:scale-105 group-hover:border-emerald-400/70 group-hover:shadow-[0_16px_50px_rgba(86,125,74,0.35)]">
         <Image
           src={item.image}
-          alt={item.title}
+          alt={`${item.title} — ${item.category} project by Astria & Co.`}
           fill
           sizes="(max-width: 640px) 190px, (max-width: 768px) 270px, 330px"
           className="object-cover transition-transform duration-500 group-hover:scale-105"

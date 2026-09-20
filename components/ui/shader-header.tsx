@@ -41,7 +41,8 @@ export function ShaderHeader({
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true);
+    const handle = requestAnimationFrame(() => setMounted(true));
+    return () => cancelAnimationFrame(handle);
   }, []);
 
   // Astria & Co. Palette:
@@ -154,18 +155,19 @@ export function ShaderHeader({
         <div className="relative z-10 max-w-3xl my-auto py-4 sm:py-8">
           {/* Signature 3-Tier Typography */}
           <h1 className="flex flex-col tracking-tight text-white mb-4 sm:mb-5 select-none">
+            <span className="sr-only">Astria &amp; Co. — Web Development, Meta Ads &amp; Digital Marketing Agency</span>
             {/* Tier 1: Soft Luminous Tint */}
-            <span className="text-[32px] xs:text-[42px] sm:text-6xl lg:text-[72px] font-normal tracking-[-0.015em] text-[#A7F3D0] drop-shadow-[0_0_35px_rgba(74,222,128,0.4)] leading-[1.08] sm:leading-[1.05]">
+            <span aria-hidden="true" className="text-[32px] xs:text-[42px] sm:text-6xl lg:text-[72px] font-normal tracking-[-0.015em] text-[#A7F3D0] drop-shadow-[0_0_35px_rgba(74,222,128,0.4)] leading-[1.08] sm:leading-[1.05]">
               {word1}
             </span>
 
             {/* Tier 2: Solid Giant Bold Sans */}
-            <span className="text-[42px] xs:text-[54px] sm:text-7xl lg:text-[92px] font-extrabold tracking-[-0.035em] text-white leading-[1.0] sm:leading-[0.98] drop-shadow-md">
+            <span aria-hidden="true" className="text-[42px] xs:text-[54px] sm:text-7xl lg:text-[92px] font-extrabold tracking-[-0.035em] text-white leading-[1.0] sm:leading-[0.98] drop-shadow-md">
               {word2}
             </span>
 
             {/* Tier 3: Flowing Elegant Italic Serif */}
-            <span className="text-[38px] xs:text-[50px] sm:text-7xl lg:text-[88px] font-serif italic font-normal tracking-[-0.02em] text-white/95 leading-[1.08] sm:leading-[1.05] drop-shadow-sm">
+            <span aria-hidden="true" className="text-[38px] xs:text-[50px] sm:text-7xl lg:text-[88px] font-serif italic font-normal tracking-[-0.02em] text-white/95 leading-[1.08] sm:leading-[1.05] drop-shadow-sm">
               {word3}
             </span>
           </h1>

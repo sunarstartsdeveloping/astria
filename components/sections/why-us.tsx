@@ -207,7 +207,7 @@ export function WhyUs() {
                       <div className="relative w-6 h-6 rounded-full overflow-hidden border border-white/20">
                         <Image
                           src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80"
-                          alt="Likeur"
+                          alt="Astria & Co. creative strategy client"
                           fill
                           className="object-cover"
                         />
@@ -219,7 +219,7 @@ export function WhyUs() {
                       <div className="relative w-6 h-6 rounded-full overflow-hidden border border-white/20">
                         <Image
                           src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80"
-                          alt="M. Irung"
+                          alt="Astria & Co. web development client"
                           fill
                           className="object-cover"
                         />
@@ -233,7 +233,7 @@ export function WhyUs() {
                       <div className="relative w-6 h-6 rounded-full overflow-hidden border border-white/20">
                         <Image
                           src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=100&auto=format&fit=crop&q=80"
-                          alt="B. Ng"
+                          alt="Astria & Co. marketing automation partner"
                           fill
                           className="object-cover"
                         />

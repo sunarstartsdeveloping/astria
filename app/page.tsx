@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Navbar } from "@/components/navbar";
 import { Hero } from "@/components/sections/hero";
 import { Services } from "@/components/sections/services";
@@ -7,6 +8,17 @@ import { Portfolio } from "@/components/sections/portfolio";
 import { Testimonials } from "@/components/sections/testimonials";
 import { CtaBanner } from "@/components/sections/cta-banner";
 import { Footer } from "@/components/footer";
+
+export const metadata: Metadata = {
+  title: {
+    absolute: "Astria & Co. — Web Dev & Digital Marketing Agency",
+  },
+  description:
+    "Astria & Co. is a digital agency in Narnaul & Delhi NCR offering custom web development, Meta ads, marketing automation, and design.",
+  alternates: {
+    canonical: "https://www.astria.co.in",
+  },
+};
 
 export default function HomePage() {
   return (

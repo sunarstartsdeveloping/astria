@@ -1,11 +1,14 @@
 import { Metadata } from "next";
 import { LegalPageLayout } from "@/components/legal-page-layout";
-import Link from "next/link";
-import { AlertCircle, ArrowRight, ShieldCheck } from "lucide-react";
+import { AlertCircle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Refund & Cancellation Policy — Astria & Co.",
-  description: "Official Refund and Cancellation Policy governing digital services, milestone deliverables, domain purchases, and payment gateway deductions for Astria & Co.",
+  title: "Refund & Cancellation Policy",
+  description:
+    "Official refund and cancellation policy for Astria & Co. digital services, milestone deliverables, project cancellations, and gateway terms.",
+  alternates: {
+    canonical: "https://www.astria.co.in/refund-policy",
+  },
 };
 
 export default function RefundPolicyPage() {

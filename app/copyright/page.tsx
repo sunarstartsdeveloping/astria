@@ -2,8 +2,12 @@ import { Metadata } from "next";
 import { LegalPageLayout } from "@/components/legal-page-layout";
 
 export const metadata: Metadata = {
-  title: "Copyright & Intellectual Property — Astria & Co.",
-  description: "Official Copyright and Intellectual Property Notice for Astria & Co. website, client deliverables, and creative assets.",
+  title: "Copyright & IP Notice",
+  description:
+    "Official copyright notice and intellectual property terms for client deliverables, creative assets, and code from Astria & Co.",
+  alternates: {
+    canonical: "https://www.astria.co.in/copyright",
+  },
 };
 
 export default function CopyrightPage() {

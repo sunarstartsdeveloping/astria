@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import { WhatsAppIcon } from "@/components/ui/whatsapp-icon";
 
 const navItems = [
   { label: "Services", href: "#services" },
@@ -62,6 +63,16 @@ export function Navbar() {
 
           {/* Actions */}
           <div className="flex items-center gap-3">
+            <a
+              href="https://wa.me/918278455700?text=Hi%20Astria%20%26%20Co.%2C%20I'm%20reaching%20out%20from%20your%20website."
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Chat on WhatsApp +91 82784 55700"
+              className="hidden sm:inline-flex items-center justify-center w-10 h-10 rounded-xl bg-white/5 hover:bg-[#25D366]/20 border border-white/10 hover:border-[#25D366]/40 text-[#25D366] transition-all hover:scale-105 active:scale-95"
+              title="Chat on WhatsApp (+91 82784 55700)"
+            >
+              <WhatsAppIcon className="w-5 h-5" fill="#25D366" />
+            </a>
             <button
               type="button"
               data-open-consultation="true"
@@ -105,6 +116,16 @@ export function Navbar() {
             >
               Book a Strategy Call
             </button>
+            <a
+              href="https://wa.me/918278455700?text=Hi%20Astria%20%26%20Co.%2C%20I'm%20reaching%20out%20from%20your%20website."
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setMobileOpen(false)}
+              className="w-full text-center text-sm font-semibold py-3.5 px-5 rounded-xl bg-[#25D366]/20 hover:bg-[#25D366]/30 border border-[#25D366]/40 text-emerald-300 flex items-center justify-center gap-2 transition-all active:scale-[0.98]"
+            >
+              <WhatsAppIcon className="w-4 h-4" fill="#25D366" />
+              Chat on WhatsApp (+91 82784 55700)
+            </a>
             <p className="text-center text-xs text-white/40">astriacreative.co@gmail.com</p>
           </div>
         </div>

@@ -92,7 +92,7 @@ export function Testimonials() {
                     <div className="relative w-12 h-12 rounded-full overflow-hidden border border-white/20 group-hover:border-emerald-400/80 bg-black/40 flex-shrink-0 transition-colors">
                       <Image
                         src={item.avatar}
-                        alt={item.name}
+                        alt={`${item.name} (${item.role} at ${item.company}) — Astria & Co. Client Testimonial`}
                         fill
                         sizes="48px"
                         className="object-cover"

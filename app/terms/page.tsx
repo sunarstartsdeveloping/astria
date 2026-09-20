@@ -2,8 +2,12 @@ import { Metadata } from "next";
 import { LegalPageLayout } from "@/components/legal-page-layout";
 
 export const metadata: Metadata = {
-  title: "Terms & Conditions — Astria & Co.",
-  description: "Official Terms and Conditions for client engagements, digital services, and payment agreements with Astria & Co.",
+  title: "Terms & Conditions",
+  description:
+    "Official terms and conditions governing digital marketing, web development, and creative service engagements with Astria & Co.",
+  alternates: {
+    canonical: "https://www.astria.co.in/terms",
+  },
 };
 
 export default function TermsPage() {

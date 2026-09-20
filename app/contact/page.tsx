@@ -1,10 +1,15 @@
 import { Metadata } from "next";
 import { LegalPageLayout } from "@/components/legal-page-layout";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
+import { WhatsAppIcon } from "@/components/ui/whatsapp-icon";
 
 export const metadata: Metadata = {
-  title: "Contact Us — Astria & Co.",
-  description: "Official contact details, merchant support, and project inquiry channels for Astria & Co.",
+  title: "Contact & Consultation",
+  description:
+    "Contact Astria & Co. for web development, Meta ads, and automation in Narnaul, Gurugram, Delhi NCR, and remote projects worldwide.",
+  alternates: {
+    canonical: "https://www.astria.co.in/contact",
+  },
 };
 
 export default function ContactPage() {
@@ -53,19 +58,44 @@ export default function ContactPage() {
 
         <div className="p-6 rounded-2xl bg-[#0E130F] border border-white/10 space-y-3">
           <div className="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
-            <Phone size={18} />
+            <WhatsAppIcon className="w-5 h-5" fill="#25D366" />
           </div>
           <div>
             <span className="text-xs uppercase font-semibold text-white/50 tracking-wider block mb-1">
               Direct Phone / WhatsApp
             </span>
-            <a
-              href="tel:+918278455700"
-              className="text-base font-bold text-white hover:text-emerald-400 transition-colors"
-            >
-              +91 82784 55700
-            </a>
-            <span className="text-xs text-white/50 block mt-1">Mon–Sat, 9:00 AM – 7:00 PM IST</span>
+            <div className="flex flex-wrap items-center gap-2">
+              <a
+                href="https://wa.me/918278455700?text=Hi%20Astria%20%26%20Co.%2C%20I'm%20reaching%20out%20via%20your%20website%20contact%20page."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-base font-bold text-white hover:text-emerald-400 transition-colors inline-flex items-center gap-1.5"
+              >
+                +91 82784 55700
+              </a>
+              <span className="text-[10px] px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-medium">
+                Active on WhatsApp
+              </span>
+            </div>
+            <div className="pt-2 flex items-center gap-2">
+              <a
+                href="https://wa.me/918278455700?text=Hi%20Astria%20%26%20Co.%2C%20I'm%20reaching%20out%20via%20your%20website%20contact%20page."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#25D366]/15 hover:bg-[#25D366]/25 border border-[#25D366]/30 text-emerald-300 text-xs font-semibold transition-all"
+              >
+                <WhatsAppIcon className="w-3.5 h-3.5" fill="#25D366" />
+                Chat on WhatsApp
+              </a>
+              <a
+                href="tel:+918278455700"
+                className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 text-white/70 hover:text-white text-xs transition-all"
+              >
+                <Phone size={12} />
+                Call
+              </a>
+            </div>
+            <span className="text-xs text-white/50 block mt-2">Mon–Sat, 9:00 AM – 7:00 PM IST</span>
           </div>
         </div>
 

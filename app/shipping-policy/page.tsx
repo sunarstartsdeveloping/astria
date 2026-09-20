@@ -2,8 +2,12 @@ import { Metadata } from "next";
 import { LegalPageLayout } from "@/components/legal-page-layout";
 
 export const metadata: Metadata = {
-  title: "Shipping & Delivery Policy — Astria & Co.",
-  description: "Official Digital Delivery and Fulfillment Policy for services, software, and creative assets produced by Astria & Co.",
+  title: "Digital Delivery Policy",
+  description:
+    "Official digital delivery timeline and fulfillment terms for web development, design assets, and marketing campaigns from Astria & Co.",
+  alternates: {
+    canonical: "https://www.astria.co.in/shipping-policy",
+  },
 };
 
 export default function ShippingPolicyPage() {

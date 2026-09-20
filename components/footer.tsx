@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { AstriaLogoMark } from "@/components/ui/astria-logo";
+import { WhatsAppIcon } from "@/components/ui/whatsapp-icon";
 
 export function Footer() {
   return (
@@ -18,20 +19,30 @@ export function Footer() {
             <p className="text-sm leading-relaxed mb-6 text-[#929592]">
               Diverting world digitally — crafting high-performance digital experiences that drive real business growth.
             </p>
-            <div className="flex items-center gap-3">
+            <div className="flex flex-wrap items-center gap-2.5">
               <a
                 href="https://instagram.com/astriacreative.co"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2.5 px-3.5 py-2 rounded-lg bg-[#1C1E1C] text-[#929592] hover:bg-brand hover:text-white transition-all text-xs font-medium group"
+                className="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-[#1C1E1C] text-[#929592] hover:bg-brand hover:text-white transition-all text-xs font-medium group"
                 aria-label="Instagram @astriacreative.co"
               >
-                <svg width={16} height={16} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-pink-400 group-hover:text-white transition-colors">
+                <svg width={15} height={15} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-pink-400 group-hover:text-white transition-colors">
                   <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
                   <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
                   <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
                 </svg>
                 <span>@astriacreative.co</span>
+              </a>
+              <a
+                href="https://wa.me/918278455700?text=Hi%20Astria%20%26%20Co.%2C%20I'm%20reaching%20out%20via%20your%20website."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-[#1C1E1C] text-[#929592] hover:bg-[#25D366] hover:text-black transition-all text-xs font-medium group"
+                aria-label="WhatsApp +91 82784 55700"
+              >
+                <WhatsAppIcon className="w-3.5 h-3.5 text-emerald-400 group-hover:text-black transition-colors" fill="currentColor" />
+                <span>WhatsApp</span>
               </a>
             </div>
           </div>
@@ -125,6 +136,17 @@ export function Footer() {
                 <Phone size={16} className="text-brand flex-shrink-0" />
                 <a href="tel:+918278455700" className="hover:text-white transition-colors">
                   +91 82784 55700
+                </a>
+              </li>
+              <li className="flex items-center gap-3">
+                <WhatsAppIcon className="w-4 h-4 text-emerald-400 flex-shrink-0" fill="#25D366" />
+                <a
+                  href="https://wa.me/918278455700?text=Hi%20Astria%20%26%20Co.%2C%20I'd%20like%20to%20connect%20with%20your%20team."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors"
+                >
+                  +91 82784 55700 (WhatsApp)
                 </a>
               </li>
               <li className="flex items-start gap-3">

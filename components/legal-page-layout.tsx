@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ArrowLeft, ShieldCheck, Mail, Phone, MapPin, ExternalLink } from "lucide-react";
 import { Footer } from "@/components/footer";
 import { AstriaLogoMark } from "@/components/ui/astria-logo";
+import { WhatsAppIcon } from "@/components/ui/whatsapp-icon";
 
 interface LegalPageLayoutProps {
   title: string;
@@ -142,6 +143,17 @@ export function LegalPageLayout({
                   <Phone size={15} className="text-brand shrink-0" />
                   <a href="tel:+918278455700" className="text-white/80 hover:text-white">
                     +91 82784 55700
+                  </a>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <WhatsAppIcon className="w-3.5 h-3.5 text-emerald-400 shrink-0" fill="#25D366" />
+                  <a
+                    href="https://wa.me/918278455700?text=Hi%20Astria%20%26%20Co.%2C%20I'm%20contacting%20you%20regarding%20support."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-emerald-400 hover:text-emerald-300 font-medium"
+                  >
+                    WhatsApp Support &rarr;
                   </a>
                 </div>
                 <div className="flex items-start gap-2.5">

@@ -2,8 +2,12 @@ import { Metadata } from "next";
 import { LegalPageLayout } from "@/components/legal-page-layout";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — Astria & Co.",
-  description: "Official Privacy Policy outlining data collection, cookie usage, data security, and payment processing standards at Astria & Co.",
+  title: "Privacy Policy",
+  description:
+    "Read the official privacy policy of Astria & Co. Learn how we handle client data, cookies, and secure payment processing standards.",
+  alternates: {
+    canonical: "https://www.astria.co.in/privacy",
+  },
 };
 
 export default function PrivacyPage() {

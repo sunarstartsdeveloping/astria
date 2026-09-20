@@ -14,6 +14,7 @@ import {
   Send,
 } from "lucide-react";
 import { AstriaLogoMark } from "@/components/ui/astria-logo";
+import { WhatsAppIcon } from "@/components/ui/whatsapp-icon";
 
 const SERVICES = [
   "Web App Development",
@@ -67,12 +68,15 @@ export function ConsultationModal() {
 
   // Reset form whenever modal opens or closes, or initial service changes
   useEffect(() => {
-    if (isOpen) {
-      resetForm();
-    } else {
-      setIsSuccess(false);
-      setErrorMsg("");
-    }
+    const handle = requestAnimationFrame(() => {
+      if (isOpen) {
+        resetForm();
+      } else {
+        setIsSuccess(false);
+        setErrorMsg("");
+      }
+    });
+    return () => cancelAnimationFrame(handle);
   }, [isOpen, selectedService]);
 
   // Handle ESC key & body scroll lock
@@ -278,9 +282,9 @@ export function ConsultationModal() {
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-black font-semibold text-sm transition-all shadow-lg shadow-emerald-950"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-[#25D366] hover:bg-[#20ba5a] text-black font-semibold text-sm transition-all shadow-lg shadow-emerald-950"
               >
-                <PhoneCall size={16} />
+                <WhatsAppIcon className="w-4 h-4 text-black" fill="currentColor" />
                 Instant WhatsApp Chat
               </a>
               <button
@@ -315,12 +319,24 @@ export function ConsultationModal() {
                   Reset form
                 </button>
               </div>
-              <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-white mb-2">
+              <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-white mb-2">
                 Tell us about your project
-              </h1>
+              </h2>
               <p className="text-sm text-white/60 font-light leading-relaxed max-w-xl">
                 A few details so we can understand what you need and come back with a relevant plan — not a generic quote.
               </p>
+              <div className="mt-3.5 flex flex-wrap items-center gap-2 text-xs">
+                <span className="text-white/50">Prefer direct messaging?</span>
+                <a
+                  href="https://wa.me/918278455700?text=Hi%20Astria%20%26%20Co.%2C%20I'd%20like%20to%20discuss%20a%20new%20project%20directly."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-emerald-400 hover:text-emerald-300 font-medium underline underline-offset-2 transition-colors"
+                >
+                  <WhatsAppIcon className="w-3.5 h-3.5" fill="#25D366" />
+                  Chat on WhatsApp (+91 82784 55700) &rarr;
+                </a>
+              </div>
             </div>
 
             {errorMsg && (
@@ -334,9 +350,9 @@ export function ConsultationModal() {
               {/* Section 1: Who you are */}
               <div className="p-5 sm:p-8 space-y-4">
                 <div>
-                  <h2 className="text-xs uppercase font-bold tracking-wider text-emerald-400">
+                  <h3 className="text-xs uppercase font-bold tracking-wider text-emerald-400">
                     Who you are
-                  </h2>
+                  </h3>
                   <p className="text-xs text-white/50 mt-0.5">So we know who we&apos;re talking to.</p>
                 </div>
 
@@ -422,9 +438,9 @@ export function ConsultationModal() {
               {/* Section 2: What you need */}
               <div className="p-6 sm:p-8 space-y-4">
                 <div>
-                  <h2 className="text-xs uppercase font-bold tracking-wider text-emerald-400">
+                  <h3 className="text-xs uppercase font-bold tracking-wider text-emerald-400">
                     What you need
-                  </h2>
+                  </h3>
                   <p className="text-xs text-white/50 mt-0.5">Pick everything that applies.</p>
                 </div>
 
@@ -498,9 +514,9 @@ export function ConsultationModal() {
               {/* Section 3: Budget & timeline */}
               <div className="p-6 sm:p-8 space-y-4">
                 <div>
-                  <h2 className="text-xs uppercase font-bold tracking-wider text-emerald-400">
+                  <h3 className="text-xs uppercase font-bold tracking-wider text-emerald-400">
                     Budget &amp; timeline
-                  </h2>
+                  </h3>
                   <p className="text-xs text-white/50 mt-0.5">Helps us recommend something that actually fits.</p>
                 </div>
 
@@ -547,9 +563,9 @@ export function ConsultationModal() {
               {/* Section 4: A bit more (optional) */}
               <div className="p-6 sm:p-8 space-y-4">
                 <div>
-                  <h2 className="text-xs uppercase font-bold tracking-wider text-emerald-400">
+                  <h3 className="text-xs uppercase font-bold tracking-wider text-emerald-400">
                     A bit more <span className="text-white/40 normal-case font-normal">(optional)</span>
-                  </h2>
+                  </h3>
                   <p className="text-xs text-white/50 mt-0.5">Any additional context to give us a head start.</p>
                 </div>
 

@@ -3,8 +3,12 @@ import { LegalPageLayout } from "@/components/legal-page-layout";
 import { Lock, ShieldCheck, Key, Server } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Security Policy — Astria & Co.",
-  description: "Official Security and Data Protection Standards for web infrastructure, client credentials, and payment gateway compliance at Astria & Co.",
+  title: "Security & Data Standards",
+  description:
+    "Learn about Astria & Co.'s data security standards, PCI-DSS Level 1 compliant payments, SSL encryption, and credential protection.",
+  alternates: {
+    canonical: "https://www.astria.co.in/security",
+  },
 };
 
 export default function SecurityPage() {
