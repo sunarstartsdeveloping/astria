@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, User } from "lucide-react";
 import { AstriaLogoMark } from "@/components/ui/astria-logo";
 import { WhatsAppIcon } from "@/components/ui/whatsapp-icon";
 
@@ -56,6 +56,14 @@ export function Footer() {
               <li>
                 <Link href="/#about" className="hover:text-white transition-colors">
                   About Us
+                </Link>
+              </li>
+              <li>
+                <Link href="/dropstop" className="hover:text-white transition-colors flex items-center gap-1.5 text-white font-medium">
+                  <span>Dropstop Shop</span>
+                  <span className="px-1.5 py-0.5 rounded bg-[#FF462D] text-white text-[9px] font-extrabold uppercase tracking-wider">
+                    Drop 01
+                  </span>
                 </Link>
               </li>
               <li>
@@ -126,6 +134,10 @@ export function Footer() {
               Get in Touch
             </h4>
             <ul className="space-y-3 text-sm">
+              <li className="flex items-center gap-3">
+                <User size={16} className="text-brand flex-shrink-0" />
+                <span className="text-white/80">Founder: <strong className="text-white font-medium">Aryan</strong></span>
+              </li>
               <li className="flex items-center gap-3">
                 <Mail size={16} className="text-brand flex-shrink-0" />
                 <a href="mailto:astriacreative.co@gmail.com" className="hover:text-white transition-colors break-all">

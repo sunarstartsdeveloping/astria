@@ -2,7 +2,7 @@
 
 import React, { ReactNode } from "react";
 import Link from "next/link";
-import { ArrowLeft, ShieldCheck, Mail, Phone, MapPin, ExternalLink } from "lucide-react";
+import { ArrowLeft, ShieldCheck, Mail, Phone, MapPin, ExternalLink, User } from "lucide-react";
 import { Footer } from "@/components/footer";
 import { AstriaLogoMark } from "@/components/ui/astria-logo";
 import { WhatsAppIcon } from "@/components/ui/whatsapp-icon";
@@ -133,6 +133,12 @@ export function LegalPageLayout({
                 Official Support
               </h3>
               <div className="space-y-3 text-xs sm:text-sm">
+                <div className="flex items-center gap-2.5">
+                  <User size={15} className="text-brand shrink-0" />
+                  <span className="text-white/80">
+                    Founder: <strong className="text-white font-medium">Aryan</strong>
+                  </span>
+                </div>
                 <div className="flex items-start gap-2.5">
                   <Mail size={15} className="text-brand shrink-0 mt-0.5" />
                   <a href="mailto:astriacreative.co@gmail.com" className="text-white/80 hover:text-white break-all">

@@ -19,6 +19,11 @@ export function JsonLd() {
         "slogan": "Diverting world digitally",
         "telephone": "+918278455700",
         "email": "astriacreative.co@gmail.com",
+        "founder": {
+          "@type": "Person",
+          "name": "Aryan",
+          "jobTitle": "Founder & Technical Director"
+        },
         "priceRange": "$$",
         "currenciesAccepted": "INR, USD, EUR",
         "paymentAccepted": "Credit Card, Debit Card, UPI, Net Banking, Stripe, Razorpay",

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { WhatsAppIcon } from "@/components/ui/whatsapp-icon";
 
@@ -59,6 +60,15 @@ export function Navbar() {
                 {item.label}
               </a>
             ))}
+            <Link
+              href="/dropstop"
+              className="inline-flex items-center gap-1.5 text-xs font-semibold text-white px-2.5 py-1 rounded-lg bg-white/[0.06] hover:bg-white/[0.12] border border-white/10 transition-colors"
+            >
+              <span>Dropstop Shop</span>
+              <span className="px-1 py-0.2 rounded bg-[#FF462D] text-white text-[9px] font-bold">
+                DROP 01
+              </span>
+            </Link>
           </div>
 
           {/* Actions */}
@@ -106,6 +116,19 @@ export function Navbar() {
                 {item.label}
               </a>
             ))}
+            <Link
+              href="/dropstop"
+              onClick={() => setMobileOpen(false)}
+              className="text-lg font-semibold py-3.5 px-4 rounded-xl border-b border-white/5 text-white flex items-center justify-between hover:bg-white/5 active:bg-white/10 transition-all"
+            >
+              <div className="flex items-center gap-2">
+                <span>Dropstop Shop</span>
+                <span className="w-2 h-2 rounded-full bg-[#FF462D]" />
+              </div>
+              <span className="text-xs px-2 py-0.5 rounded-full bg-[#FF462D] text-white font-bold">
+                DROP 01
+              </span>
+            </Link>
           </div>
           <div className="pt-6 border-t border-white/10 space-y-3">
             <button

@@ -133,6 +133,7 @@ export default function TermsPage() {
         </p>
         <div className="p-4 rounded-xl bg-white/[0.03] border border-white/10 space-y-1 text-sm font-mono text-white/80">
           <div>Entity: Astria &amp; Co.</div>
+          <div>Founder: Aryan</div>
           <div>Email: astriacreative.co@gmail.com</div>
           <div>Phone: +91 82784 55700</div>
           <div>Location: Narnaul, Haryana, India (Works remotely worldwide)</div>

@@ -1,12 +1,12 @@
 import { Metadata } from "next";
 import { LegalPageLayout } from "@/components/legal-page-layout";
-import { Mail, Phone, MapPin, Clock } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, User, Building2 } from "lucide-react";
 import { WhatsAppIcon } from "@/components/ui/whatsapp-icon";
 
 export const metadata: Metadata = {
   title: "Contact & Consultation",
   description:
-    "Contact Astria & Co. for web development, Meta ads, and automation in Narnaul, Gurugram, Delhi NCR, and remote projects worldwide.",
+    "Contact Astria & Co. and founder Aryan for web development, Meta ads, and automation in Narnaul, Gurugram, Delhi NCR, and remote projects worldwide.",
   alternates: {
     canonical: "https://www.astria.co.in/contact",
   },
@@ -36,8 +36,23 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Official Merchant Details Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6">
+      {/* Official Merchant & Founder Details Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 my-6">
+        <div className="p-6 rounded-2xl bg-[#0E130F] border border-white/10 space-y-3">
+          <div className="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
+            <User size={18} />
+          </div>
+          <div>
+            <span className="text-xs uppercase font-semibold text-white/50 tracking-wider block mb-1">
+              Founder &amp; Principal
+            </span>
+            <span className="text-base font-bold text-white block">
+              Aryan
+            </span>
+            <span className="text-xs text-white/50 block mt-1">Founder &amp; Lead Architect at Astria &amp; Co.</span>
+          </div>
+        </div>
+
         <div className="p-6 rounded-2xl bg-[#0E130F] border border-white/10 space-y-3">
           <div className="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
             <Mail size={18} />
@@ -135,6 +150,19 @@ export default function ContactPage() {
             <span className="text-xs text-white/50 block mt-1">Daily project drops &amp; creative case studies</span>
           </div>
         </div>
+
+        <div className="p-6 rounded-2xl bg-[#0E130F] border border-white/10 space-y-3">
+          <div className="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
+            <Building2 size={18} />
+          </div>
+          <div>
+            <span className="text-xs uppercase font-semibold text-white/50 tracking-wider block mb-1">
+              Legal Entity &amp; Founder
+            </span>
+            <span className="text-base font-bold text-white block">Astria &amp; Co.</span>
+            <span className="text-xs text-white/50 block mt-1">Founded by Aryan • Digital Creative &amp; Tech Agency</span>
+          </div>
+        </div>
       </div>
 
       <section className="space-y-4">
@@ -145,6 +173,31 @@ export default function ContactPage() {
           <Clock size={20} className="text-emerald-400 shrink-0" />
           <div className="text-sm text-white/80">
             <strong className="text-white">Operating Schedule:</strong> Monday through Saturday: 09:00 AM – 07:00 PM IST. Direct client urgent support is available 24/7 via designated Slack / WhatsApp VIP channels.
+          </div>
+        </div>
+      </section>
+
+      <section className="space-y-4 pt-2">
+        <h2 className="text-xl font-bold text-white tracking-tight border-b border-white/10 pb-2">
+          Executive &amp; Merchant Information
+        </h2>
+        <div className="p-5 rounded-2xl bg-white/[0.03] border border-white/10 space-y-4 text-sm text-white/80">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            <div>
+              <span className="text-white/50 text-xs uppercase tracking-wider block font-semibold mb-1">Founder &amp; Principal</span>
+              <strong className="text-white text-base block">Aryan</strong>
+              <p className="text-xs text-white/60 mt-0.5">Founder &amp; Lead Architect</p>
+            </div>
+            <div>
+              <span className="text-white/50 text-xs uppercase tracking-wider block font-semibold mb-1">Operating Business</span>
+              <strong className="text-white text-base block">Astria &amp; Co.</strong>
+              <p className="text-xs text-white/60 mt-0.5">Digital Creative &amp; Tech Agency</p>
+            </div>
+            <div>
+              <span className="text-white/50 text-xs uppercase tracking-wider block font-semibold mb-1">Official Grievance Desk</span>
+              <strong className="text-white text-base block">Aryan (Founder)</strong>
+              <p className="text-xs text-white/60 mt-0.5">astriacreative.co@gmail.com</p>
+            </div>
           </div>
         </div>
       </section>
