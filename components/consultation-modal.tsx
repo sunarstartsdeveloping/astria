@@ -44,7 +44,7 @@ const INITIAL_FORM_DATA = {
 };
 
 export function ConsultationModal() {
-  const { isOpen, closeConsultation, selectedService } = useConsultation();
+  const { isOpen, closeConsultation, selectedService, isWelcomeMode } = useConsultation();
 
   // Form State
   const [formData, setFormData] = useState(INITIAL_FORM_DATA);
@@ -154,8 +154,8 @@ export function ConsultationModal() {
     e.preventDefault();
     setErrorMsg("");
 
-    if (!formData.name || !formData.brand || !formData.email || !formData.phone || !formData.brief) {
-      setErrorMsg("Please fill in all required fields marked with *");
+    if (!formData.name.trim() || !formData.email.trim() || !formData.phone.trim()) {
+      setErrorMsg("Please fill in your name, email, and phone/WhatsApp number *");
       return;
     }
 
@@ -167,15 +167,31 @@ export function ConsultationModal() {
     setIsSubmitting(true);
 
     try {
-      const servicesList = Array.isArray(formData.services) && formData.services.length > 0
-        ? formData.services.join(", ")
-        : "Not specified";
+      const finalBrand =
+        formData.brand.trim() ||
+        (isWelcomeMode ? "Profile Visitor" : "Individual / Founder");
+      const finalBrief =
+        formData.brief.trim() ||
+        (isWelcomeMode
+          ? "Welcome Form Inquiry: Requested project consultation & callback."
+          : "General Project Consultation Request");
 
-      const emailSubject = `🚀 New Project Consultation: ${formData.name} (${formData.brand})`;
+      const submissionData = {
+        ...formData,
+        brand: finalBrand,
+        brief: finalBrief,
+      };
+
+      const servicesList =
+        Array.isArray(formData.services) && formData.services.length > 0
+          ? formData.services.join(", ")
+          : "Not specified";
+
+      const emailSubject = `🚀 New Lead (${isWelcomeMode ? "Welcome Form" : "Consultation"}): ${formData.name} (${finalBrand})`;
 
       // Dispatch to Telegram Bot and Web3Forms simultaneously
       const [telegramResult] = await Promise.allSettled([
-        sendContactToTelegram(formData),
+        sendContactToTelegram(submissionData),
         fetch("https://api.web3forms.com/submit", {
           method: "POST",
           headers: {
@@ -188,16 +204,16 @@ export function ConsultationModal() {
             from_name: `${formData.name} (via Astria & Co. Portal)`,
             to_email: "astriacreative.co@gmail.com",
             name: formData.name,
-            brand: formData.brand,
+            brand: finalBrand,
             email: formData.email,
             phone: formData.phone,
             website: formData.website || "None",
             services: servicesList,
             project_type: formData.projectType || "N/A",
-            brief: formData.brief,
+            brief: finalBrief,
             budget: formData.budget || "Not specified",
             timeline: formData.timeline || "Not specified",
-            referral_source: formData.source || "N/A",
+            referral_source: formData.source || (isWelcomeMode ? "Profile Landing Popup" : "N/A"),
             style_references: formData.refs || "N/A",
             reference_files: formData.fileNames.join(", ") || "None",
           }),
@@ -311,7 +327,7 @@ export function ConsultationModal() {
                     <AstriaLogoMark className="w-4.5 h-4.5 text-emerald-400" />
                   </span>
                   <span className="text-xs uppercase tracking-widest text-emerald-400 font-semibold">
-                    Free Strategy Consultation
+                    {isWelcomeMode ? "👋 Welcome to Astria & Co." : "Free Strategy Consultation"}
                   </span>
                 </div>
                 <button
@@ -324,10 +340,12 @@ export function ConsultationModal() {
                 </button>
               </div>
               <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-white mb-2">
-                Tell us about your project
+                {isWelcomeMode ? "Welcome! Let's build your next big project" : "Tell us about your project"}
               </h2>
               <p className="text-sm text-white/60 font-light leading-relaxed max-w-xl">
-                A few details so we can understand what you need and come back with a relevant plan — not a generic quote.
+                {isWelcomeMode
+                  ? "Glad to connect! Fill in your details below to get a tailored proposal and direct consultation with founder Aryan."
+                  : "A few details so we can understand what you need and come back with a relevant plan — not a generic quote."}
               </p>
               <div className="mt-3.5 flex flex-wrap items-center gap-2 text-xs">
                 <span className="text-white/50">Prefer direct messaging?</span>
@@ -378,13 +396,12 @@ export function ConsultationModal() {
 
                   <div className="space-y-1.5">
                     <label htmlFor="brand" className="text-xs sm:text-sm font-medium text-white/90 block">
-                      Business / brand name <span className="text-emerald-400">*</span>
+                      Business / brand name <span className="text-xs text-white/40 font-light">(optional)</span>
                     </label>
                     <input
                       type="text"
                       id="brand"
-                      required
-                      placeholder="Your company"
+                      placeholder="Your brand or company"
                       value={formData.brand}
                       onChange={(e) => setFormData({ ...formData, brand: e.target.value })}
                       className="w-full px-3.5 py-2.5 rounded-xl bg-[#141A15] border border-white/10 text-white placeholder:text-white/30 text-sm focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500/50 transition-all"
@@ -501,11 +518,10 @@ export function ConsultationModal() {
 
                 <div className="space-y-1.5">
                   <label htmlFor="brief" className="text-xs sm:text-sm font-medium text-white/90 block">
-                    Tell us what you&apos;re looking to build or fix <span className="text-emerald-400">*</span>
+                    Tell us what you&apos;re looking to build or achieve <span className="text-xs text-white/40 font-light">(optional)</span>
                   </label>
                   <textarea
                     id="brief"
-                    required
                     rows={3}
                     placeholder="A sentence or two is enough to start — we'll ask follow-ups on the call."
                     value={formData.brief}
