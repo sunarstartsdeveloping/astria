@@ -7,7 +7,7 @@ export const TELEGRAM_BOT_TOKEN =
   "8996638171:AAH-7FC2E0OrLxvTbgID7JErHiDpD4Rc9G4";
 
 export const DEFAULT_TELEGRAM_CHAT_ID =
-  process.env.NEXT_PUBLIC_TELEGRAM_CHAT_ID || "";
+  process.env.NEXT_PUBLIC_TELEGRAM_CHAT_ID || "5765135287";
 
 function escapeHtml(str: string): string {
   if (!str) return "";
