@@ -177,3 +177,132 @@ ${escapeHtml(data.brief)}
     };
   }
 }
+
+export interface VisitorArrivalData {
+  visitorId: string;
+  ip?: string;
+  location?: string;
+  isp?: string;
+  device?: string;
+  browser?: string;
+  os?: string;
+  screen?: string;
+  page?: string;
+  referrer?: string;
+  utm?: string;
+}
+
+/**
+ * Sends a visitor arrival notification to Telegram
+ */
+export async function sendVisitorArrivalToTelegram(
+  data: VisitorArrivalData
+): Promise<{ success: boolean; error?: string }> {
+  try {
+    const chatId = await resolveTelegramChatId();
+    if (!chatId) return { success: false, error: "No chat ID" };
+
+    const now = new Intl.DateTimeFormat("en-IN", {
+      dateStyle: "medium",
+      timeStyle: "short",
+      timeZone: "Asia/Kolkata",
+    }).format(new Date());
+
+    const message = `
+🟢 <b>NEW VISITOR ON ASTRIA & CO.</b>
+━━━━━━━━━━━━━━━━━━━━
+📍 <b>Location:</b> ${escapeHtml(data.location || "Unknown")}
+🌐 <b>IP & ISP:</b> <code>${escapeHtml(data.ip || "N/A")}</code> (${escapeHtml(data.isp || "N/A")})
+📱 <b>Device:</b> ${escapeHtml(data.device || "Desktop")} • ${escapeHtml(data.browser || "Browser")} (${escapeHtml(data.os || "OS")})
+🖥 <b>Screen:</b> ${escapeHtml(data.screen || "N/A")}
+📄 <b>Landing Page:</b> <code>${escapeHtml(data.page || "/")}</code>
+🔗 <b>Referrer:</b> ${escapeHtml(data.referrer || "Direct / Bookmark")}
+${data.utm ? `🎯 <b>Campaign/UTM:</b> ${escapeHtml(data.utm)}\n` : ""}🆔 <b>Session ID:</b> <code>#${escapeHtml(data.visitorId)}</code>
+━━━━━━━━━━━━━━━━━━━━
+⏰ <i>${now} IST</i>
+`.trim();
+
+    const response = await fetch(
+      `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`,
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          chat_id: chatId,
+          text: message,
+          parse_mode: "HTML",
+          disable_web_page_preview: true,
+        }),
+      }
+    );
+
+    const result = await response.json();
+    return { success: !!result.ok };
+  } catch (err: unknown) {
+    return {
+      success: false,
+      error: err instanceof Error ? err.message : "Unknown error",
+    };
+  }
+}
+
+export interface VisitorMilestoneData {
+  visitorId: string;
+  action: string;
+  details?: string;
+  timeSpent?: string;
+  page?: string;
+  location?: string;
+}
+
+/**
+ * Sends high-intent visitor action or milestone update to Telegram
+ */
+export async function sendVisitorMilestoneToTelegram(
+  data: VisitorMilestoneData
+): Promise<{ success: boolean; error?: string }> {
+  try {
+    const chatId = await resolveTelegramChatId();
+    if (!chatId) return { success: false, error: "No chat ID" };
+
+    const now = new Intl.DateTimeFormat("en-IN", {
+      dateStyle: "medium",
+      timeStyle: "short",
+      timeZone: "Asia/Kolkata",
+    }).format(new Date());
+
+    const message = `
+⚡ <b>VISITOR ACTIVITY: ${escapeHtml(data.action.toUpperCase())}</b>
+━━━━━━━━━━━━━━━━━━━━
+🆔 <b>Visitor:</b> <code>#${escapeHtml(data.visitorId)}</code>
+${data.location ? `📍 <b>From:</b> ${escapeHtml(data.location)}\n` : ""}🎯 <b>Action:</b> ${escapeHtml(data.action)}
+${data.details ? `📝 <b>Details:</b> ${escapeHtml(data.details)}\n` : ""}📄 <b>Page:</b> <code>${escapeHtml(data.page || "/")}</code>
+⏱ <b>Time on Site:</b> ${escapeHtml(data.timeSpent || "Just now")}
+━━━━━━━━━━━━━━━━━━━━
+⏰ <i>${now} IST</i>
+`.trim();
+
+    const response = await fetch(
+      `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`,
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          chat_id: chatId,
+          text: message,
+          parse_mode: "HTML",
+          disable_web_page_preview: true,
+        }),
+      }
+    );
+
+    const result = await response.json();
+    return { success: !!result.ok };
+  } catch (err: unknown) {
+    return {
+      success: false,
+      error: err instanceof Error ? err.message : "Unknown error",
+    };
+  }
+}
+

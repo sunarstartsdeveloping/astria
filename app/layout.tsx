@@ -5,6 +5,8 @@ import { ConsultationProvider } from "@/components/consultation-context";
 import { ConsultationModal } from "@/components/consultation-modal";
 import { WhatsAppFloatingButton } from "@/components/whatsapp-floating-button";
 import { JsonLd } from "@/components/json-ld";
+import { ClarityAnalytics } from "@/components/analytics/clarity";
+import { VisitorTracker } from "@/components/analytics/visitor-tracker";
 
 const poppins = Poppins({
   variable: "--font-sans",
@@ -86,6 +88,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html lang="en" className={`dark ${poppins.variable} h-full antialiased`} suppressHydrationWarning>
       <body className="min-h-full flex flex-col bg-[#080908] text-white">
         <JsonLd />
+        <ClarityAnalytics />
+        <VisitorTracker />
         <ConsultationProvider>
           {children}
           <ConsultationModal />
