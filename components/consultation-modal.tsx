@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import { AstriaLogoMark } from "@/components/ui/astria-logo";
 import { WhatsAppIcon } from "@/components/ui/whatsapp-icon";
+import { sendContactToTelegram } from "@/lib/telegram";
 
 const SERVICES = [
   "Web App Development",
@@ -172,36 +173,39 @@ export function ConsultationModal() {
 
       const emailSubject = `🚀 New Project Consultation: ${formData.name} (${formData.brand})`;
 
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify({
-          access_key: "0997f394-0cf2-4a0b-93ff-09c314051a66",
-          subject: emailSubject,
-          from_name: `${formData.name} (via Astria & Co. Portal)`,
-          to_email: "astriacreative.co@gmail.com",
-          name: formData.name,
-          brand: formData.brand,
-          email: formData.email,
-          phone: formData.phone,
-          website: formData.website || "None",
-          services: servicesList,
-          project_type: formData.projectType || "N/A",
-          brief: formData.brief,
-          budget: formData.budget || "Not specified",
-          timeline: formData.timeline || "Not specified",
-          referral_source: formData.source || "N/A",
-          style_references: formData.refs || "N/A",
-          reference_files: formData.fileNames.join(", ") || "None",
+      // Dispatch to Telegram Bot and Web3Forms simultaneously
+      const [telegramResult] = await Promise.allSettled([
+        sendContactToTelegram(formData),
+        fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({
+            access_key: "0997f394-0cf2-4a0b-93ff-09c314051a66",
+            subject: emailSubject,
+            from_name: `${formData.name} (via Astria & Co. Portal)`,
+            to_email: "astriacreative.co@gmail.com",
+            name: formData.name,
+            brand: formData.brand,
+            email: formData.email,
+            phone: formData.phone,
+            website: formData.website || "None",
+            services: servicesList,
+            project_type: formData.projectType || "N/A",
+            brief: formData.brief,
+            budget: formData.budget || "Not specified",
+            timeline: formData.timeline || "Not specified",
+            referral_source: formData.source || "N/A",
+            style_references: formData.refs || "N/A",
+            reference_files: formData.fileNames.join(", ") || "None",
+          }),
         }),
-      });
+      ]);
 
-      if (!response.ok) {
-        const result = await response.json().catch(() => ({}));
-        throw new Error(result.message || "Failed to submit form");
+      if (telegramResult.status === "fulfilled" && !telegramResult.value.success) {
+        console.warn("Telegram notification note:", telegramResult.value.error);
       }
 
       setIsSuccess(true);

@@ -59,14 +59,6 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/dropstop" className="hover:text-white transition-colors flex items-center gap-1.5 text-white font-medium">
-                  <span>Dropstop Shop</span>
-                  <span className="px-1.5 py-0.5 rounded bg-[#FF462D] text-white text-[9px] font-extrabold uppercase tracking-wider">
-                    Drop 01
-                  </span>
-                </Link>
-              </li>
-              <li>
                 <Link href="/#services" className="hover:text-white transition-colors">
                   Services
                 </Link>

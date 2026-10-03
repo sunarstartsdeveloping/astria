@@ -55,13 +55,6 @@
   --color-brand-border: rgba(86, 125, 74, 0.18);
   --color-gold: #C9A84C;
   --color-gold-dark: #B0912F;
-
-  /* Dropstop shop accent colors (Bold sale/CTA) */
-  --color-dropstop-accent: #FF462D;
-  --color-dropstop-accent-hover: #E4361E;
-  --color-dropstop-accent-subtle: rgba(255, 70, 45, 0.12);
-  --color-dropstop-accent-border: rgba(255, 70, 45, 0.28);
-  --color-dropstop-accent-glow: rgba(255, 70, 45, 0.4);
 }
 
 :root {

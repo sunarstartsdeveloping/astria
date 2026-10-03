@@ -9,18 +9,6 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "images.unsplash.com",
       },
-      {
-        protocol: "https",
-        hostname: "**.cjdropshipping.com",
-      },
-      {
-        protocol: "https",
-        hostname: "**.oss-accelerate.aliyuncs.com",
-      },
-      {
-        protocol: "https",
-        hostname: "**.alicdn.com",
-      },
     ],
   },
 };
